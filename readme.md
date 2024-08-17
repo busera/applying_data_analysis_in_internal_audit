@@ -5,16 +5,17 @@ This repository contains resources and examples for applying data analysis techn
 ## Contents
 
 1. [Introduction](./introduction.md)
-2. [Confirmatory vs. Exploratory Approaches](./confirmatory-vs-exploratory.md)
-3. [Causal vs. Non-Causal Analysis](./causal-vs-non-causal.md)
-4. [Application Examples](./application-examples.md)
+2. [Definitions](./definitions.md)
+3. [Confirmatory vs. Exploratory Approaches](./confirmatory-vs-exploratory.md)
+4. [Causal vs. Non-Causal Analysis](./causal-vs-non-causal.md)
+5. [Application Examples](./application-examples.md)
    - Expense Report Auditing
    - Inventory Management Auditing
    - High-Value Transactions Auditing
-5. [Exploratory Data Analysis (EDA) in Auditing](./eda-in-auditing.md)
-6. [Value of Exploratory and Non-Causal Approaches](./value-of-approaches.md)
-7. [Conclusion](./conclusion.md)
-8. [References](./references.md)
+6. [Exploratory Data Analysis (EDA) in Auditing](./eda-in-auditing.md)
+7. [Value of Exploratory and Non-Causal Approaches](./value-of-approaches.md)
+8. [Conclusion](./conclusion.md)
+9. [References](./references.md)
 
 ## About This Project
 
