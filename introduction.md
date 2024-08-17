@@ -1,4 +1,3 @@
-# How to Apply Data Analysis in Internal Audit
 ## Introduction & Problem Statement
 
 The application of data analysis in internal audit has been a topic of increasing interest and discussion in my recent months. While numerous knowledge briefs and guides are available from respected organizations like the IIA and ISACA, these resources often present a more high-level and generic approach. As a professional with a background in data science, I've found that many existing resources in this area lack some depth and specificity to better bridge the gap between data analysis theory and its practical application in internal audit. 
