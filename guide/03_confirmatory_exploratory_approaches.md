@@ -8,7 +8,6 @@ In internal audit, both confirmatory and exploratory approaches play crucial rol
 | Objective          | Verify, confirm, or refute/disprove          | Discover, understand, or generate hypotheses           |
 | Analytical Methods | Statistical tests, compliance checking       | Data mining, pattern recognition, advanced analytics   |
 | Outcomes           | Clear yes/no answers or quantifiable results | Insights, patterns, or areas for further investigation |
-[Aspects of confirmatory and exploratory approaches in internal audit]
 
 ### Confirmatory Approach in Internal Audit
 
