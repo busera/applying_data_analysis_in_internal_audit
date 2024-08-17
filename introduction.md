@@ -9,6 +9,6 @@ This observation has motivated me to create this comprehensive guide. This guide
 
 To further bridge the gap between theory and practice, I am planning to build a GitHub repository that will collect anonymized real-life examples, including Python code for analysis and visualization.
 
----
+
 
 [^1]:	Card, D., Min, Y., & Serghiou, S. (2021, December 14). Open, rigorous and reproducible research: A practitioner's handbook. Stanford Data Science. https://stanforddatascience.github.io
