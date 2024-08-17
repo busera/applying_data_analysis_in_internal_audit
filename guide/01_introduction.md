@@ -7,7 +7,7 @@ This observation has motivated me to create this comprehensive guide. This guide
 - Confirmatory vs. Exploratory Questions
 - Causal vs. Non-Causal Questions
 
-To further bridge the gap between theory and practice, I am planning to build a GitHub repository that will collect anonymized real-life examples, including Python code for analysis and visualization.
+To further bridge the gap between theory and practice, I am planning to build a GitHub repository that will collect examples (generated and anonymized real-life data), including Python code for analysis and visualization.
 
 
 
