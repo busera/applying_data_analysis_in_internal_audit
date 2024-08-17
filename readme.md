@@ -24,7 +24,7 @@ This project explores the application of data analysis techniques in internal au
 - Confirmatory vs. Exploratory Questions
 - Causal vs. Non-Causal Questions
 
-The repository includes real-life examples, Python code for analysis and visualization, and comprehensive guides to help internal auditors leverage data analysis effectively.
+Going forward, this repository will include real-life examples, Python code for analysis and visualization, and comprehensive guides to help internal auditors leverage data analysis effectively.
 
 ## Contributing
 
