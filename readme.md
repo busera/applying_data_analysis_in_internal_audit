@@ -4,8 +4,8 @@ This repository contains resources and examples for applying data analysis techn
 
 ## Contents
 
-1. [Introduction](./guide/introduction.md)
-2. [Definitions](./guide/definitions.md)
+1. [Introduction](./guide/01_introduction.md)
+2. [Definitions](./guide/02_definitions.md)
 3. [Confirmatory vs. Exploratory Approaches](./confirmatory-vs-exploratory.md)
 4. [Causal vs. Non-Causal Analysis](./causal-vs-non-causal.md)
 5. [Application Examples](./application-examples.md)
