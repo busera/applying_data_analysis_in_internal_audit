@@ -6,7 +6,7 @@ This repository contains resources and examples for applying data analysis techn
 
 1. [Introduction](./guide/01_introduction.md)
 2. [Definitions](./guide/02_definitions.md)
-3. [Confirmatory vs. Exploratory Approaches](./confirmatory-vs-exploratory.md)
+3. [Confirmatory vs. Exploratory Approaches](./03_confirmatory_exploratory_approaches.md)
 4. [Causal vs. Non-Causal Analysis](./causal-vs-non-causal.md)
 5. [Application Examples](./application-examples.md)
    - Expense Report Auditing
