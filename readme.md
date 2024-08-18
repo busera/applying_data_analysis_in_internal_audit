@@ -30,3 +30,7 @@ This repository will include examples with generated or anonymized real-life dat
 ## Contact
 
 For questions or feedback, please open an issue in this repository.
+
+---
+
+tags: #data_analysis
