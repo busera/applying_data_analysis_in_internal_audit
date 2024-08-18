@@ -1,12 +1,15 @@
-## The Value of Exploratory and Non-Causal Approaches
+## The Role of Exploratory Data Analysis (EDA)
 
-In my experience, exploratory and non-causal questions often provide the most valuable insights in internal auditing, particularly in larger organizations. This is due to several factors:
+Exploratory Data Analysis serves as a critical first step in the data analysis process for internal audits, bridging both confirmatory and exploratory approaches.
 
-- Confirmatory questions are typically already addressed and implemented by first and second lines of defense, reducing the need for internal audit to focus heavily on these areas.
-- Causal questions, while valuable, often face practical limitations:
-	- Required data may not be available in sufficient quantity or quality
-	- Results can be challenging to report and communicate, especially when dealing with complex statistical concepts
-- Exploratory and non-causal approaches offer several advantages:
-	- They can uncover unexpected patterns or risks that might be missed by more targeted approaches
-	- They often require less stringent data requirements, making them more practical in many audit contexts
-	- The insights gained can be more easily communicated and actioned by stakeholders
+Key EDA Techniques:
+- Data quality assessment (missing values, outliers, inconsistencies)
+- Descriptive statistics (mean, median, standard deviation)
+- Data visualization (histograms, scatter plots, box plots)
+- Correlation analysis
+
+EDA in the Audit Process:
+1. Initial Data Exploration: Use EDA to gain insights into the dataset's characteristics and potential areas of interest.
+2. Hypothesis Refinement: Based on EDA findings, refine existing hypotheses or generate new ones for confirmatory analysis.
+3. Anomaly Detection: Identify unusual patterns or outliers that may warrant further investigation.
+4. Variable Selection: Determine which variables are most relevant for subsequent analyses.
