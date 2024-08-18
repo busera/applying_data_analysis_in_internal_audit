@@ -24,7 +24,7 @@ This project explores the application of data analysis techniques in internal au
 - Confirmatory vs. Exploratory Questions
 - Causal vs. Non-Causal Questions
 
-Going forward, this repository will include examples with generated or anonymized real-life data, Python code for analysis and visualization.
+This repository will include examples with generated or anonymized real-life data, Python code for analysis and visualization.
 
 
 ## Contact
