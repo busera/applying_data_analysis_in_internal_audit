@@ -1,4 +1,4 @@
-# Data Analysis in Internal Audit
+# Applying Data Analysis in Internal Audit
 
 This repository contains resources and examples for applying data analysis techniques in internal auditing. It aims to bridge the gap between data analysis theory and practical application in the field of internal audit.
 
