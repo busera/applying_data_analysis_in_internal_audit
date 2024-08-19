@@ -4,7 +4,7 @@
   'theme': 'base', 
   'themeVariables': { 
     'fontFamily': 'arial',
-    'clusterBkg': '#f0f0f0'
+    'clusterBkg': '#f0f0f0',
   }
 }}%%
 
@@ -62,6 +62,3 @@ flowchart TB
 
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
-    classDef default fill:#e6f3ff,stroke:#333,stroke-width:1px;
-    classDef start_end fill:#f9f,stroke:#333,stroke-width:2px;
-    class A,F start_end;
