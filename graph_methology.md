@@ -5,7 +5,7 @@ graph TD
     D[Phase 3: Analyze]
     E[Phase 4: Interpretation & Communication]
 
-    subgraph "Phase 1"
+    subgraph "Phase 1: Scope & Plan"
     B1[1.0 Initial Objective Setting]
     B2[2.0 Define Data Analysis Scope and Questions]
     B3[3.0 Identify Data Requirements]
@@ -35,7 +35,8 @@ graph TD
     E3[15.0 Document Technical Details]
     E --> E1 --> E2 --> E3
     end
-
+		
+		A[Start] --> B1
     B5 --> C
     C2 --> D
     D5 --> E
