@@ -14,7 +14,7 @@ graph TD
     subgraph "Phase 2: Data Collection & Curation"
     C1[6.0 Data Validation and Cleansing]
     C2[7.0 Data Management]
-    C --> C1 --> C2
+    C1 --> C2
     end
 
     subgraph "Phase 3: Analyze"
@@ -23,14 +23,14 @@ graph TD
     D3[10.0 Perform Targeted/Focused Analysis]
     D4[11.0 Interpret & Analyze Results]
     D5[12.0 Documentation and Iteration]
-    D --> D1 --> D2 --> D3 --> D4 --> D5
+    D1 --> D2 --> D3 --> D4 --> D5
     end
 
     subgraph "Phase 4: Interpretation & Communication"
     E1[13.0 Synthesize and Evaluate Findings]
     E2[14.0 Prepare and Communicate Results]
     E3[15.0 Document Technical Details]
-    E --> E1 --> E2 --> E3
+    E1 --> E2 --> E3
     end
 		
 		A[Start] --> B1
