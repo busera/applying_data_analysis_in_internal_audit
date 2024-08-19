@@ -15,7 +15,7 @@ Define the objectives and questions to be addressed by the analytical activities
 		- Planning memorandum
 <br> <br>
 - **2.0 Define Data Analysis Scope and Questions**
-	- 2.1 [Formulate initial questions and hypotheses, considering](./2.0_define_da_questions/01_introduction.md):
+	- 2.1 [Formulate initial questions and hypotheses, considering](./2.0_define_da_questions/00_define_da_questions.md):
 		- Confirmatory questions
 		- Exploratory questions
 		- Causal questions
