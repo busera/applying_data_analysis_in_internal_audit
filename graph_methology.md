@@ -1,13 +1,5 @@
 ```mermaid
 
-%%{init: {
-  'theme': 'base', 
-  'themeVariables': { 
-    'fontFamily': 'arial',
-    'clusterBkg': '#e0e0e0',
-  }
-}}%%
-
 flowchart TB
     A[Start]
     F[End]
@@ -62,6 +54,3 @@ flowchart TB
 
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
-    classDef default fill:#f0f0f0,stroke:#333,stroke-width:1px;
-    classDef start_end fill:#f9f,stroke:#333,stroke-width:2px;
-    class A,F start_end;
