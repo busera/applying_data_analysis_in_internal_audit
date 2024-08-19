@@ -1,4 +1,11 @@
 ```mermaid
+%%{init: {
+  'theme': 'base', 
+  'themeVariables': { 
+    'fontFamily': 'arial',
+    'clusterBkg': '#f0f0f0'
+  }
+}}%%
 
 graph TB
     A[Start]
