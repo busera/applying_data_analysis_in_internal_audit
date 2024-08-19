@@ -4,7 +4,6 @@ graph TD
     C[Phase 2: Data Collection & Curation]
     D[Phase 3: Analyze]
     E[Phase 4: Interpretation & Communication]
-    E --> F[End]
 
     subgraph "Phase 1"
     B1[1.0 Initial Objective Setting]
@@ -40,6 +39,7 @@ graph TD
     B5 --> C
     C2 --> D
     D5 --> E
+    E3 --> F[End]
 
     %% New error paths
     D1 -.-> |Refine questions| B2
