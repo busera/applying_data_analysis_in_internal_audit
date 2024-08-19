@@ -11,7 +11,7 @@ graph TD
     B3[3.0 Identify Data Requirements]
     B4[4.0 Stakeholder Engagement]
     B5[5.0 Data Request and Acquisition]
-    A --> B1 --> B2 --> B3 --> B4 --> B5
+    B1 --> B2 --> B3 --> B4 --> B5
     end
 
     subgraph "Phase 2"
