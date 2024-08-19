@@ -47,4 +47,3 @@ graph TD
 
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
-    ```
