@@ -7,9 +7,6 @@ This observation has motivated me to create this comprehensive guide. This guide
 - Confirmatory vs. Exploratory Questions
 - Causal vs. Non-Causal Questions
 
-To further bridge the gap between theory and practice, I am planning to build a [GitHub repository](https://github.com/busera/applying_data_analysis_in_internal_audit) that will collect examples (generated and anonymized real-life data), including Python code for analysis and visualization.
-
-
 
 [^1]: IIA Knowledge Briefs: Data Analytics, Parts 1-3. https://www.theiia.org/en/content/articles/global-perspectives-and-insights/2023/GlobalPerspectivesInsightsDataAnalyticsParts1-3/
 
