@@ -2,6 +2,8 @@
 
 This repository contains resources and examples for applying data analysis techniques in internal auditing. It aims to bridge the gap between data analysis theory and practical application in the field of internal audit including code examples, data sets and visualizations.
 
+./methodology/ia_da_methodology_graph.md
+
 ## Contents
 
 1. [Introduction](./guide/01_introduction.md)
