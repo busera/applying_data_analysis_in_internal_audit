@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Start] --> B[Phase 1: Scope & Plan]
     B --> C[Phase 2: Data Collection & Curation]
@@ -46,3 +47,4 @@ graph TD
 
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
+    ```
