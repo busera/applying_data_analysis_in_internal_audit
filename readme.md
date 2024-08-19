@@ -68,8 +68,9 @@ flowchart TB
     class B2,C1 error;
 ```
 
-## Workflow Details
-[2.0 Formulate initial questions and hypotheses](./methodology/2.0_define_da_questions/00_define_da_questions.md)
+## Available Guides
+- [Methodology](./methodology/00_methodology.md)
+- [2.0 Formulate initial questions and hypotheses](./methodology/2.0_define_da_questions/00_define_da_questions.md)
 
 ## About This Project
 
