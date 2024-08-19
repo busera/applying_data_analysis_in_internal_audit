@@ -4,11 +4,11 @@
   'themeVariables': { 
     'fontFamily': 'arial',
     'clusterBkg': '#f0f0f0'
+    'nodeBkg': '#e6f3ff'
   }
 }}%%
 
 graph TB
-		direction TB
     A[Start]
     
     subgraph "Phase 1: Scope & Plan"
