@@ -1,9 +1,9 @@
 ```mermaid
 graph TD
     A[Start] --> B[Phase 1: Scope & Plan]
-    B --> C[Phase 2: Data Collection & Curation]
-    C --> D[Phase 3: Analyze]
-    D --> E[Phase 4: Interpretation & Communication]
+    C[Phase 2: Data Collection & Curation]
+    D[Phase 3: Analyze]
+    E[Phase 4: Interpretation & Communication]
     E --> F[End]
 
     subgraph "Phase 1"
