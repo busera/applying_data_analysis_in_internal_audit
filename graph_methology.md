@@ -23,7 +23,7 @@ graph TD
     D3[10.0 Perform Targeted/Focused Analysis]
     D4[11.0 Interpret & Analyze Results]
     D5[12.0 Documentation and Iteration]
-    D1 --> D2 --> D3 --> D4 --> D5
+    D1 --> D2 --> D3 --> D4 --> D5 --> E1
     end
 
     subgraph "Phase 4: Interpretation & Communication"
