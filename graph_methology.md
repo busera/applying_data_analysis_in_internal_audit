@@ -4,7 +4,7 @@
   'theme': 'base', 
   'themeVariables': { 
     'fontFamily': 'arial',
-    'clusterBkg': '#f0f0f0',
+    'clusterBkg': '#e0e0e0',
   }
 }}%%
 
@@ -56,7 +56,7 @@ flowchart TB
     D5 --> E1
     E3 --> F
 
-    %% New error paths
+    %% Additional paths
     D1 -.-> |Refine questions| B2
     D1 -.-> |Revisit data cleansing| C1
 
