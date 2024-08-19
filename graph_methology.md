@@ -8,13 +8,13 @@ graph TD
     B3[3.0 Identify Data Requirements]
     B4[4.0 Stakeholder Engagement]
     B5[5.0 Data Request and Acquisition]
-    B1 --> B2 --> B3 --> B4 --> B5
+    B1 --> B2 --> B3 --> B4 --> B5 --> C1
     end
 
     subgraph "Phase 2: Data Collection & Curation"
     C1[6.0 Data Validation and Cleansing]
     C2[7.0 Data Management]
-    C1 --> C2
+    C1 --> C2 --> D1
     end
 
     subgraph "Phase 3: Analyze"
