@@ -34,9 +34,6 @@ graph TD
     end
 		
 		A[Start] --> B1
-    B5 --> C
-    C2 --> D
-    D5 --> E
     E3 --> F[End]
 
     %% New error paths
