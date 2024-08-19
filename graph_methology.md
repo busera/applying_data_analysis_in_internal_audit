@@ -48,6 +48,3 @@ graph TD
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
     
-    %% New class for left-aligned phase labels
-    classDef phaseLabel text-align:left,font-weight:bold;
-    class B,C,D,E phaseLabel;
