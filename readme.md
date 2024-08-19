@@ -68,6 +68,9 @@ flowchart TB
     class B2,C1 error;
 ```
 
+## Workflow Details
+[2.0 Formulate initial questions and hypotheses](./methodolgy/2.0_define_da_questions/00_define_da_questions.md)
+
 ## About This Project
 
 This project explores the application of data analysis techniques in internal auditing, adapting key concepts from academic research methodologies to the practical world of internal audit. It focuses on two distinct concepts:
