@@ -1,6 +1,6 @@
 ```mermaid
 graph TD
-    A[Start] --> B[Phase 1: Scope & Plan]
+    A[Start]
     C[Phase 2: Data Collection & Curation]
     D[Phase 3: Analyze]
     E[Phase 4: Interpretation & Communication]
