@@ -4,7 +4,6 @@
   'themeVariables': { 
     'fontFamily': 'arial',
     'clusterBkg': '#f0f0f0'
-    'nodeBkg': '#e6f3ff'
   }
 }}%%
 
