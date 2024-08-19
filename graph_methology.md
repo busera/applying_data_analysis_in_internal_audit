@@ -1,10 +1,7 @@
 ```mermaid
 graph TD
     A[Start]
-    C[Phase 2: Data Collection & Curation]
-    D[Phase 3: Analyze]
-    E[Phase 4: Interpretation & Communication]
-
+    
     subgraph "Phase 1: Scope & Plan"
     B1[1.0 Initial Objective Setting]
     B2[2.0 Define Data Analysis Scope and Questions]
@@ -14,13 +11,13 @@ graph TD
     B1 --> B2 --> B3 --> B4 --> B5
     end
 
-    subgraph "Phase 2"
+    subgraph "Phase 2: Data Collection & Curation"
     C1[6.0 Data Validation and Cleansing]
     C2[7.0 Data Management]
     C --> C1 --> C2
     end
 
-    subgraph "Phase 3"
+    subgraph "Phase 3: Analyze"
     D1[8.0 Conduct Initial EDA]
     D2[9.0 Develop and Execute Test Scripts and Queries]
     D3[10.0 Perform Targeted/Focused Analysis]
@@ -29,7 +26,7 @@ graph TD
     D --> D1 --> D2 --> D3 --> D4 --> D5
     end
 
-    subgraph "Phase 4"
+    subgraph "Phase 4: Interpretation & Communication"
     E1[13.0 Synthesize and Evaluate Findings]
     E2[14.0 Prepare and Communicate Results]
     E3[15.0 Document Technical Details]
