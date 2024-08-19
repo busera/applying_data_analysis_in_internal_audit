@@ -3,8 +3,8 @@
 This repository contains resources and examples for applying data analysis techniques in internal auditing. It aims to bridge the gap between data analysis theory and practical application in the field of internal audit including code examples, data sets and visualizations.
 
 ## Methodology
-1. [Phase 1 - Scope & Plan](./methodology/Phase 1- Scope & Plan.md)
-2. 
+1. [Phase 1 - Scope & Plan](./methodology/phase1.md)
+2. ...
 
 ## Workflow
 
