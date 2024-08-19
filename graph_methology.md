@@ -1,5 +1,5 @@
 ```mermaid
-graph TD
+graph TB
     A[Start]
     
     subgraph "Phase 1: Scope & Plan"
