@@ -69,7 +69,7 @@ flowchart TB
 ```
 
 ## Workflow Details
-[2.0 Formulate initial questions and hypotheses](/methodolgy/2.0_define_da_questions/00_define_da_questions.md)
+[2.0 Formulate initial questions and hypotheses](./methodology/2.0_define_da_questions/00_define_da_questions.md)
 
 ## About This Project
 
