@@ -5,7 +5,6 @@ This repository contains resources and examples for applying data analysis techn
 ## Methodology
 1. [Phase 1 - Scope & Plan](./methodology/phase1.md)
 2. [Phase 2 - Data Collection & Curation](./methodology/phase2.md)
-	- 2.0 Define Data Analysis Scope and Questions
 3. [Phase 3 -Analyze](./methodology/phase3.md)
 4. [Phase 4 - Interpretation & Communication](./methodology/phase4.md)
 
@@ -68,22 +67,6 @@ flowchart TB
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
 ```
-
-
-## 2.0 Define Data Analysis Scope and Questions
-
-1. [Introduction](./guide/01_introduction.md)
-2. [Definitions](./guide/02_definitions.md)
-3. [Confirmatory vs. Exploratory Approaches](./guide/03_confirmatory_exploratory_approaches.md)
-4. [Causal vs. Non-Causal Analysis](./guide/04_causal-vs-non-causal.md)
-5. [Application Examples](./guide/05_application_examples.md)
-    - Expense Report Auditing
-    - Inventory Management Auditing
-    - High-Value Transactions Auditing
-6. [Exploratory Data Analysis (EDA) in Auditing](./guide/06_eda_in_auditing.md)
-7. [Value of Exploratory and Non-Causal Approaches](./guide/07_value_of_approaches.md)
-8. [Conclusion](./guide/08_conclusion.md)
-9. [References](./guide/09_references.md)
 
 ## About This Project
 
