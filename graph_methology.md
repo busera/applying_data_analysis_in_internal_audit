@@ -8,6 +8,7 @@
 }}%%
 
 graph TB
+		direction TB
     A[Start]
     
     subgraph "Phase 1: Scope & Plan"
