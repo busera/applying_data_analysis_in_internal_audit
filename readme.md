@@ -66,7 +66,6 @@ flowchart TB
     D1 -.-> |Revisit data cleansing| C1
 
     classDef error stroke:#f00,stroke-width:2px;
-    class B2,C1 error;
 
 ```
 
