@@ -78,11 +78,11 @@ flowchart TB
 		- Confirmatory vs. Exploratory Questions
 		- Causal vs. Non-Causal Questions
 
-
 ## Additional Resources
 - NIST Exploratory Data Analysis: [Link](https://www.itl.nist.gov/div898/handbook/index.htm)
 - Altair Visualization Curriculum: [Link](https://idl.uw.edu/visualization-curriculum/intro.html)
 - Data Storytelling & Communication Cheat Sheet: [Link](https://www.datacamp.com/cheat-sheet/data-storytelling-and-communication-cheat-sheet)
+- The seaborn.objects interface: [Link](https://seaborn.pydata.org/tutorial/objects_interface.html)
 
 ## Contact
 
