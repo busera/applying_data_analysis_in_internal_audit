@@ -93,6 +93,10 @@ This repository will include examples with generated or anonymized real-life dat
 
 For questions or feedback, please open an issue in this repository.
 
+---
+
+tags: #data_analysis #audit
+
 
 [^1]: IIA Knowledge Briefs: Data Analytics, Parts 1-3. https://www.theiia.org/en/content/articles/global-perspectives-and-insights/2023/GlobalPerspectivesInsightsDataAnalyticsParts1-3/
 
@@ -109,4 +113,3 @@ https://www.semanticscholar.org/paper/CRISP-DM-1.0:-Step-by-step-data-mining-gui
 
 [^6]: Card, D., Min, Y., & Serghiou, S. (2021, December 14). Open, rigorous and reproducible research: A practitioner's handbook. Stanford Data Science. https://stanforddatascience.github.io
 
-tags: #data_analysis #audit
