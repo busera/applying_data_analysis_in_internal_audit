@@ -80,9 +80,9 @@ flowchart TB
 
 
 ## Additional Resources
-- NIST Exploratory Data Analysis: https://www.itl.nist.gov/div898/handbook/index.htm
-- Altair Visualization Curriculum: https://idl.uw.edu/visualization-curriculum/intro.html
-- Data Storytelling & Communication Cheat Sheet: https://www.datacamp.com/cheat-sheet/data-storytelling-and-communication-cheat-sheet
+- NIST Exploratory Data Analysis: [Link](https://www.itl.nist.gov/div898/handbook/index.htm)
+- Altair Visualization Curriculum: [Link](https://idl.uw.edu/visualization-curriculum/intro.html)
+- Data Storytelling & Communication Cheat Sheet: [Link](https://www.datacamp.com/cheat-sheet/data-storytelling-and-communication-cheat-sheet)
 
 ## Contact
 
