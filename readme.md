@@ -79,16 +79,6 @@ flowchart TB
 		- Confirmatory vs. Exploratory Questions
 		- Causal vs. Non-Causal Questions
 
-## About This Project
-
-This project explores the application of data analysis techniques in internal auditing, adapting key concepts from academic research methodologies to the practical world of internal audit. It focuses on two distinct concepts:
-
-- Confirmatory vs. Exploratory Questions
-- Causal vs. Non-Causal Questions
-
-This repository will include examples with generated or anonymized real-life data, Python code for analysis and visualization.
-
-
 ## Contact
 
 For questions or feedback, please open an issue in this repository.
