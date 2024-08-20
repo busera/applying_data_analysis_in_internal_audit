@@ -13,50 +13,45 @@ This observation has motivated me to create this comprehensive repository contai
 ## Workflow
 
 ```mermaid
-
 flowchart TB
     A[Start]
     F[End]
 
     subgraph workflow [" "]
         direction TB
-        subgraph Phase1
+        subgraph Phase1["Phase 1: Scope & Plan"]
             direction TB
-            title1["<div style='text-align: left; font-weight: bold;'>Phase 1: Scope & Plan</div>"]
             B1[1.0 Initial Objective Setting]
             B2[2.0 Define Data Analysis Scope and Questions]
             B3[3.0 Identify Data Requirements]
             B4[4.0 Stakeholder Engagement]
             B5[5.0 Data Request and Acquisition]
-            title1 --> B1 --> B2 --> B3 --> B4 --> B5
+            B1 --> B2 --> B3 --> B4 --> B5
         end
 
-        subgraph Phase2
+        subgraph Phase2["Phase 2: Data Collection & Curation"]
             direction TB
-            title2["<div style='text-align: left; font-weight: bold;'>Phase 2: Data Collection & Curation</div>"]
             C1[6.0 Data Validation and Cleansing]
             C2[7.0 Data Management]
-            title2 --> C1 --> C2
+            C1 --> C2
         end
 
-        subgraph Phase3
+        subgraph Phase3["Phase 3: Analyze"]
             direction TB
-            title3["<div style='text-align: left; font-weight: bold;'>Phase 3: Analyze</div>"]
             D1[8.0 Conduct Initial EDA]
             D2[9.0 Develop and Execute Test Scripts and Queries]
             D3[10.0 Perform Targeted/Focused Analysis]
             D4[11.0 Interpret & Analyze Results]
             D5[12.0 Documentation and Iteration]
-            title3 --> D1 --> D2 --> D3 --> D4 --> D5
+            D1 --> D2 --> D3 --> D4 --> D5
         end
 
-        subgraph Phase4
+        subgraph Phase4["Phase 4: Interpretation & Communication"]
             direction TB
-            title4["<div style='text-align: left; font-weight: bold;'>Phase 4: Interpretation & Communication</div>"]
             E1[13.0 Synthesize and Evaluate Findings]
             E2[14.0 Prepare and Communicate Results]
             E3[15.0 Document Technical Details]
-            title4 --> E1 --> E2 --> E3
+            E1 --> E2 --> E3
         end
     end
 
@@ -69,6 +64,8 @@ flowchart TB
     %% Additional paths
     D1 -.-> |Refine questions| B2
     D1 -.-> |Revisit data cleansing| C1
+
+    classDef error stroke:#f00,stroke-width:2px;
 
 ```
 
