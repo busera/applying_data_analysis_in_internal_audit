@@ -13,7 +13,6 @@ This observation has motivated me to create this comprehensive repository contai
 ## Workflow
 
 ```mermaid
-
 flowchart TB
     A[Start]
     F[End]
@@ -68,6 +67,7 @@ flowchart TB
 
     classDef error stroke:#f00,stroke-width:2px;
     class B2,C1 error;
+
 ```
 
 ## Available Guides
