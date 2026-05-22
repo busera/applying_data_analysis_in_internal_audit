@@ -16,7 +16,7 @@ Synthesize and communicate the results of data analysis, providing actionable in
 	- 13.8 Develop recommendations based on analytical results
 	- 13.9 Assess the strength of evidence supporting each finding and recommendation
 	- 13.10 Identify any remaining uncertainties or areas for future investigation
-<br><br>
+
 - **14.0 Prepare and Communicate Results**
 	- 14.1 Align findings with audit objectives
 		- Map findings and insights to original audit objectives
@@ -36,7 +36,7 @@ Synthesize and communicate the results of data analysis, providing actionable in
 		- Facilitate discussion of findings, recommendations, and next steps
 		- Address questions and concerns raised by the audience
 		- Document any additional insights or action items arising from the presentation
-<br><br>
+
 - **15.0 Document Technical Details**
 	- 15.1 Organize and annotate all scripts and queries used in the analysis
 	- 15.2 Ensure reproducibility of the analysis
