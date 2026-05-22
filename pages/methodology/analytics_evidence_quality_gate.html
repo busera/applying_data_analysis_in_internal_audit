@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics Evidence Quality Gate | Applying Data Analysis in Internal Audit</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <main class="content-page">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/analytics_evidence_quality_gate.md">Source on GitHub</a></nav>
+    <article class="card document">
+      <h1>Analytics Evidence Quality Gate</h1>
+      <p>Use this gate after analysis has been performed and before relying on the output for audit planning, control testing, stakeholder communication, or reportable findings.</p>
+      <p>The use-case decision gate asks: <strong>Is this worth analyzing?</strong></p>
+      <p>This evidence-quality gate asks: <strong>Can we trust and use the result?</strong></p>
+      <h2>Evidence-quality criteria</h2>
+      <table><thead><tr><th>Criterion</th><th>Strong signal</th><th>Weak signal</th><th>Decision impact</th></tr></thead><tbody>
+      <tr><td>Population completeness</td><td>The extract reconciles to a source-system report, expected row count, control total, or independently obtained population listing.</td><td>The population may be incomplete, filtered unexpectedly, duplicated, or missing relevant entities or periods.</td><td>Do not conclude on the full population until completeness is resolved.</td></tr>
+      <tr><td>Key field accuracy</td><td>Fields used in the logic are understood, mapped to source-system definitions, and spot-checked against source records.</td><td>Field meaning is ambiguous, transformed without explanation, or not traceable to source records.</td><td>Validate field definitions and sample records before relying on exceptions.</td></tr>
+      <tr><td>Logic validity</td><td>The script or query implements the audit rule exactly as intended and has been reviewed.</td><td>The logic is difficult to explain, unreviewed, or only approximately aligned to the control expectation.</td><td>Review and correct logic before using outputs as audit evidence.</td></tr>
+      <tr><td>Exception validation</td><td>Exceptions have been checked for false positives, timing issues, master-data changes, or legitimate business explanations.</td><td>The output is treated as a finding without validating whether exceptions are real.</td><td>Use results for follow-up only until exceptions are validated.</td></tr>
+      <tr><td>Reproducibility</td><td>Inputs, transformations, scripts, parameters, dates, row counts, and outputs are documented well enough to rerun or review.</td><td>The result depends on manual steps, undocumented filters, or overwritten files.</td><td>Improve documentation before relying on the result.</td></tr>
+      <tr><td>Limitations and uncertainty</td><td>Known data gaps, assumptions, exclusions, and residual uncertainty are documented.</td><td>Limitations are unknown or omitted from the interpretation.</td><td>Restrict the conclusion or disclose the limitation.</td></tr>
+      <tr><td>Review and sign-off</td><td>A knowledgeable reviewer has checked the data, logic, output, and interpretation.</td><td>Only the analyst has reviewed the result.</td><td>Obtain review before communicating conclusions.</td></tr>
+      </tbody></table>
+      <h2>Evidence-use outcomes</h2>
+      <table><thead><tr><th>Outcome</th><th>Use when</th><th>Permitted use</th></tr></thead><tbody>
+      <tr><td>Reliable for audit evidence</td><td>Population, fields, logic, exceptions, reproducibility, and review are strong.</td><td>Support control testing, audit conclusions, or reportable findings.</td></tr>
+      <tr><td>Reliable for planning</td><td>Some limitations remain, but the direction is useful and the risk of overstatement is controlled.</td><td>Support planning, scoping, risk assessment, or sample selection.</td></tr>
+      <tr><td>Follow-up required</td><td>Exceptions or logic are plausible but not validated.</td><td>Use as a lead list for inquiry or additional testing.</td></tr>
+      <tr><td>Exploratory insight only</td><td>The analysis is useful for learning or hypothesis generation but lacks a reliable rule or validated population.</td><td>Use for discussion or planning hypotheses only.</td></tr>
+      <tr><td>Do not use</td><td>Population, field accuracy, logic, or confidentiality issues undermine reliance.</td><td>Do not use for audit conclusions; redesign the procedure.</td></tr>
+      </tbody></table>
+      <h2>Minimum evidence pack</h2>
+      <p>For any analysis that may support audit work, preserve enough evidence for another auditor to understand and challenge the result:</p>
+      <ul>
+      <li>Audit objective, risk, control expectation, and population.</li>
+      <li>Data source, extraction date, period covered, and source owner.</li>
+      <li>Requested fields and rationale for each field.</li>
+      <li>Row counts before and after cleansing or filtering.</li>
+      <li>Completeness and accuracy checks performed.</li>
+      <li>Script, query, notebook, or documented manual steps.</li>
+      <li>Exception logic and thresholds.</li>
+      <li>Output file or table with generation date.</li>
+      <li>Exception validation notes and false-positive handling.</li>
+      <li>Limitations, assumptions, and reviewer sign-off.</li>
+      </ul>
+      <h2>Example: payment approval testing</h2>
+      <p>An output showing 42 late approvals is not automatically an audit finding.</p>
+      <p>Before reporting, check:</p>
+      <ol>
+      <li>Does the payment population reconcile to the source payment report?</li>
+      <li>Is “approval timestamp” the final approval, first approval, or workflow update timestamp?</li>
+      <li>Are payment dates and approval timestamps in the same timezone?</li>
+      <li>Were any emergency approvals, delegated approvals, or retroactive workflow migrations allowed by policy?</li>
+      <li>Were sampled exceptions traced back to source records?</li>
+      <li>Did a reviewer confirm that the script reflects the control expectation?</li>
+      </ol>
+      <p>If those checks are strong, the output may support control testing or a finding. If not, it is a lead list for follow-up, not a conclusion.</p>
+    </article>
+  </main>
+</body>
+</html>

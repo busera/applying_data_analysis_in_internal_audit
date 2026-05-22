@@ -12,7 +12,7 @@
     <article class="card document">
       <h1>Applying Data Analysis in Internal Audit</h1>
       <p>This repository is an early-stage practical guide for applying data analysis in internal audit. It focuses on the step that is often weak in audit analytics work: translating audit objectives, risks, and controls into answerable analytical questions, data requirements, reproducible tests, and communicable results.</p>
-      <p>The project currently contains methodology notes and practical guidance. Planned additions include synthetic datasets, Python notebooks, reusable templates, and visualizations.</p>
+      <p>The project currently contains methodology notes, practical guidance, templates, one synthetic dataset, and one worked example. Planned additions include Python notebooks, reusable checks, visualizations, and more end-to-end examples.</p>
       <h2>Status</h2>
       <p>Current maturity: early-stage methodology guide.</p>
       <p>What exists now:</p>
@@ -20,13 +20,13 @@
       <li>A four-phase methodology for audit analytics work.</li>
       <li>A workflow from audit objective setting to communication of results.</li>
       <li>Guidance on formulating confirmatory, exploratory, causal, and non-causal questions.</li>
-      <li>Decision gates for deciding whether data analysis is worth pursuing in a specific audit context.</li>
+      <li>A use-case decision gate for deciding whether data analysis is worth pursuing in a specific audit context.</li>
+      <li>An evidence-quality gate for deciding whether analytical output is reliable enough for planning, testing, or reporting.</li>
       <li>Reproducibility, evidence-strength, and confidentiality guidance.</li>
-      <li>Initial templates and a worked example structure.</li>
+      <li>Initial templates, a synthetic dataset, and a worked example.</li>
       </ul>
       <p>Planned next additions:</p>
       <ul>
-      <li>Synthetic audit datasets.</li>
       <li>Python examples and notebooks.</li>
       <li>Reusable data quality checks.</li>
       <li>Example visualizations.</li>
@@ -34,132 +34,81 @@
       </ul>
       <h2>Methodology</h2>
       <ol>
-      <li><a href="methodology/phase1.html">Phase 1 - Scope &amp; Plan</a></li>
-      <li><a href="methodology/phase2.html">Phase 2 - Data Collection &amp; Curation</a></li>
-      <li><a href="methodology/phase3.html">Phase 3 - Analyze</a></li>
-      <li><a href="methodology/phase4.html">Phase 4 - Interpretation &amp; Communication</a></li>
+      <li><a href="./methodology/phase1.html">Phase 1 - Scope &amp; Plan</a></li>
+      <li><a href="./methodology/phase2.html">Phase 2 - Data Collection &amp; Curation</a></li>
+      <li><a href="./methodology/phase3.html">Phase 3 - Analyze</a></li>
+      <li><a href="./methodology/phase4.html">Phase 4 - Interpretation &amp; Communication</a></li>
       </ol>
       <p>Supporting guides:</p>
       <ul>
-      <li><a href="methodology/00_methodology.html">Methodology overview</a></li>
-      <li><a href="methodology/analytics_decision_gate.html">Analytics decision gate</a></li>
-      <li><a href="methodology/2.0_define_da_questions/00_define_da_questions.html">Formulating initial questions and hypotheses</a></li>
-      <li><a href="methodology/data_governance_reproducibility.html">Data governance and reproducibility</a></li>
-      <li><a href="methodology/evidence_strength.html">Evidence strength and reporting threshold</a></li>
+      <li><a href="./methodology/00_methodology.html">Methodology overview</a></li>
+      <li><a href="./methodology/analytics_decision_gate.html">Analytics use-case decision gate</a></li>
+      <li><a href="./methodology/analytics_evidence_quality_gate.html">Analytics evidence quality gate</a></li>
+      <li><a href="./methodology/data_governance_reproducibility.html">Data governance and reproducibility</a></li>
+      <li><a href="./methodology/evidence_strength.html">Evidence strength and reporting threshold</a></li>
+      <li><a href="./methodology/2.0_define_da_questions/00_define_da_questions.html">Question design guide</a></li>
       </ul>
       <h2>Workflow</h2>
-      <pre><code>
-      flowchart TB
+      <pre><code>flowchart TB
+    A[Start]
+    F[End]
 
-          A[Start]
+    subgraph workflow [&quot; &quot;]
+        direction TB
+        subgraph Phase1[&quot;Phase 1: Scope &amp; Plan&quot;]
+            direction TB
+            B1[1.0 Initial Objective Setting]
+            B2[2.0 Define Data Analysis Scope and Questions]
+            B3[3.0 Identify Data Requirements]
+            B4[4.0 Stakeholder Engagement]
+            B5[5.0 Data Request and Acquisition]
+            B1 --&gt; B2 --&gt; B3 --&gt; B4 --&gt; B5
+        end
 
-          F[End]
+        subgraph Phase2[&quot;Phase 2: Data Collection &amp; Curation&quot;]
+            direction TB
+            C1[6.0 Data Validation and Cleansing]
+            C2[7.0 Data Management]
+            C1 --&gt; C2
+        end
 
+        subgraph Phase3[&quot;Phase 3: Analyze&quot;]
+            direction TB
+            D1[8.0 Conduct Initial EDA]
+            D2[9.0 Develop and Execute Test Scripts and Queries]
+            D3[10.0 Perform Targeted/Focused Analysis]
+            D4[11.0 Interpret &amp; Analyze Results]
+            D5[12.0 Documentation and Iteration]
+            D1 --&gt; D2 --&gt; D3 --&gt; D4 --&gt; D5
+        end
 
+        subgraph Phase4[&quot;Phase 4: Interpretation &amp; Communication&quot;]
+            direction TB
+            E1[13.0 Synthesize and Evaluate Findings]
+            E2[14.0 Prepare and Communicate Results]
+            E3[15.0 Document Technical Details]
+            E1 --&gt; E2 --&gt; E3
+        end
+    end
 
-          subgraph workflow [&quot; &quot;]
+    A --&gt; B1
+    B5 --&gt; C1
+    C2 --&gt; D1
+    D5 --&gt; E1
+    E3 --&gt; F
 
-              direction TB
-
-              subgraph Phase1[&quot;Phase 1: Scope &amp; Plan&quot;]
-
-                  direction TB
-
-                  B1[1.0 Initial Objective Setting]
-
-                  B2[2.0 Define Data Analysis Scope and Questions]
-
-                  B3[3.0 Identify Data Requirements]
-
-                  B4[4.0 Stakeholder Engagement]
-
-                  B5[5.0 Data Request and Acquisition]
-
-                  B1 --&gt; B2 --&gt; B3 --&gt; B4 --&gt; B5
-
-              end
-
-
-
-              subgraph Phase2[&quot;Phase 2: Data Collection &amp; Curation&quot;]
-
-                  direction TB
-
-                  C1[6.0 Data Validation and Cleansing]
-
-                  C2[7.0 Data Management]
-
-                  C1 --&gt; C2
-
-              end
-
-
-
-              subgraph Phase3[&quot;Phase 3: Analyze&quot;]
-
-                  direction TB
-
-                  D1[8.0 Conduct Initial EDA]
-
-                  D2[9.0 Develop and Execute Test Scripts and Queries]
-
-                  D3[10.0 Perform Targeted/Focused Analysis]
-
-                  D4[11.0 Interpret &amp; Analyze Results]
-
-                  D5[12.0 Documentation and Iteration]
-
-                  D1 --&gt; D2 --&gt; D3 --&gt; D4 --&gt; D5
-
-              end
-
-
-
-              subgraph Phase4[&quot;Phase 4: Interpretation &amp; Communication&quot;]
-
-                  direction TB
-
-                  E1[13.0 Synthesize and Evaluate Findings]
-
-                  E2[14.0 Prepare and Communicate Results]
-
-                  E3[15.0 Document Technical Details]
-
-                  E1 --&gt; E2 --&gt; E3
-
-              end
-
-          end
-
-
-
-          A --&gt; B1
-
-          B5 --&gt; C1
-
-          C2 --&gt; D1
-
-          D5 --&gt; E1
-
-          E3 --&gt; F
-
-
-
-          D1 -.-&gt; |Refine questions| B2
-
-          D1 -.-&gt; |Revisit data cleansing| C1
-
-      </code></pre>
+    D1 -.-&gt; |Refine questions| B2
+    D1 -.-&gt; |Revisit data cleansing| C1</code></pre>
       <h2>Practical templates</h2>
       <ul>
-      <li><a href="templates/data_requirements_checklist.html">Data requirements checklist</a></li>
-      <li><a href="templates/data_quality_checklist.html">Data quality checklist</a></li>
-      <li><a href="templates/analysis_log_template.html">Analysis log template</a></li>
-      <li><a href="templates/finding_evidence_mapping.html">Finding evidence mapping template</a></li>
+      <li><a href="./templates/data_requirements_checklist.html">Data requirements checklist</a></li>
+      <li><a href="./templates/data_quality_checklist.html">Data quality checklist</a></li>
+      <li><a href="./templates/analysis_log_template.html">Analysis log template</a></li>
+      <li><a href="./templates/finding_evidence_mapping.html">Finding evidence mapping template</a></li>
       </ul>
       <h2>Worked examples</h2>
       <ul>
-      <li><a href="examples/high_value_transaction_approval_testing.html">High-value transaction approval testing</a></li>
+      <li><a href="./examples/high_value_transaction_approval_testing.html">High-value transaction approval testing</a></li>
       </ul>
       <h2>Design principles</h2>
       <ul>
@@ -191,7 +140,7 @@
       <p>[^3]: Seven Steps to Empowerment With Data Analytics. https://www.isaca.org/resources/news-and-trends/newsletters/atisaca/2023/volume-34/seven-steps-to-empowerment-with-data-analytics</p>
       <p>[^4]: Advanced Data Analytics for IT Auditors. https://www.isaca.org/resources/isaca-journal/issues/2016/volume-6/advanced-data-analytics-for-it-auditors</p>
       <p>[^5]: CRISP-DM 1.0: Step-by-step data mining guide. https://www.semanticscholar.org/paper/CRISP-DM-1.0:-Step-by-step-data-mining-guide-Chapman/54bad20bbc7938991bf34f86dde0babfbd2d5a72</p>
-      <p>[^6]: Card, D., Min, Y., &amp; Serghiou, S. (2021, December 14). Open, rigorous and reproducible research: A practitioner&#x27;s handbook. Stanford Data Science. https://stanforddatascience.github.io</p>
+      <p>[^6]: Card, D., Min, Y., &amp; Serghiou, S. (2021, December 14). Open, rigorous and reproducible research: A practitioner's handbook. Stanford Data Science. https://stanforddatascience.github.io</p>
     </article>
   </main>
 </body>

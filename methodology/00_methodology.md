@@ -7,7 +7,8 @@
 
 Supporting guidance:
 
-- [Analytics decision gate](./analytics_decision_gate.md)
+- [Analytics use-case decision gate](./analytics_decision_gate.md)
 - [Data governance and reproducibility](./data_governance_reproducibility.md)
 - [Evidence strength and reporting threshold](./evidence_strength.md)
+- [Analytics evidence quality gate](./analytics_evidence_quality_gate.md)
 - [Question design guide](./2.0_define_da_questions/00_define_da_questions.md)

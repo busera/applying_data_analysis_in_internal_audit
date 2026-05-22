@@ -12,7 +12,7 @@ Risk: high-value transactions may be processed without appropriate review, incre
 
 Control expectation: transactions above the defined threshold require documented approval by an authorized manager before the transaction is completed.
 
-## Analytics decision gate
+## Analytics use-case decision gate
 
 | Question | Example answer |
 | --- | --- |

@@ -3,31 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Analytics Decision Gate | Applying Data Analysis in Internal Audit</title>
+  <title>Analytics Use-Case Decision Gate | Applying Data Analysis in Internal Audit</title>
   <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
   <main class="content-page">
     <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/analytics_decision_gate.md">Source on GitHub</a></nav>
     <article class="card document">
-      <h1>Analytics Decision Gate</h1>
-      <p>Use this gate before investing time in data extraction, cleansing, scripting, or visualization. Internal audit data analysis is strongest when the audit question, expected behavior, and usable data are aligned.</p>
+      <h1>Analytics Use-Case Decision Gate</h1>
+      <p>Use this gate before requesting data or writing scripts. Its purpose is narrow: decide whether a proposed audit question is suitable for data analysis.</p>
+      <p>This is not the evidence-quality gate. It answers: <strong>Is this worth analyzing?</strong> A separate evidence-quality gate answers: <strong>Can we rely on the analytical result?</strong></p>
+      <h2>What this gate does</h2>
+      <p>A proposed analytics use case should pass five checks before the audit team invests time in extraction, cleansing, scripting, or visualization:</p>
+      <ol>
+      <li>The audit question is clear.</li>
+      <li>The expected behavior can be measured or observed.</li>
+      <li>The required data is likely available and usable.</li>
+      <li>The output would support audit planning, testing, assurance, or reporting.</li>
+      <li>The data request is proportionate and can be handled securely.</li>
+      </ol>
       <h2>Decision criteria</h2>
       <table><thead><tr><th>Criterion</th><th>Strong signal</th><th>Weak signal</th><th>Decision impact</th></tr></thead><tbody>
-      <tr><td>Business process and risk clarity</td><td>The process, risk, control objective, and population are understood.</td><td>The audit team is still unclear what risk or control is being tested.</td><td>Clarify scope before requesting data.</td></tr>
-      <tr><td>Bright-line rule or measurable expectation</td><td>There is a policy threshold, approval rule, expected sequence, timing requirement, or known risk indicator.</td><td>The question is broad, subjective, or cannot be translated into observable data fields.</td><td>Narrow the question or treat the work as exploratory.</td></tr>
-      <tr><td>Data availability and usability</td><td>Source systems, fields, owners, extraction method, and expected row counts are known.</td><td>Data access is uncertain, fields are missing, or quality is unknown.</td><td>Run a small feasibility check before full analysis.</td></tr>
-      <tr><td>Audit value</td><td>The result can improve assurance, planning, risk assessment, or stakeholder insight.</td><td>The output would be interesting but not useful for audit conclusions or decisions.</td><td>Do not pursue unless it supports learning or planning.</td></tr>
-      <tr><td>Confidentiality and proportionality</td><td>The data requested is necessary and can be handled securely.</td><td>The request collects more sensitive data than needed.</td><td>Minimize, mask, or use synthetic data where possible.</td></tr>
+      <tr><td>Audit question clarity</td><td>The audit objective, risk, control expectation, and population can be stated clearly.</td><td>The audit team is still asking broad questions such as “Can we analyze purchases?” or “Can we find suspicious activity?”</td><td>Clarify the audit objective and scope before requesting data.</td></tr>
+      <tr><td>Measurable rule or observable pattern</td><td>There is a policy threshold, approval rule, expected sequence, timing requirement, master-data flag, relationship, or known risk indicator.</td><td>The question is subjective or cannot be translated into fields, dates, statuses, amounts, or relationships.</td><td>Narrow the question or treat the work as exploratory.</td></tr>
+      <tr><td>Data feasibility</td><td>Source systems, fields, owners, extraction method, and expected row counts are known or can be confirmed quickly.</td><td>Data access is uncertain, required fields may not exist, or quality is unknown.</td><td>Run a small feasibility check before full analysis.</td></tr>
+      <tr><td>Audit value</td><td>The result could change audit planning, sample selection, control testing, assurance conclusions, stakeholder discussion, or reporting.</td><td>The output would be interesting but would not influence audit work.</td><td>Do not pursue unless it supports learning or planning.</td></tr>
+      <tr><td>Confidentiality and proportionality</td><td>The data requested is necessary, limited to the purpose, and can be handled securely.</td><td>The request collects more sensitive data than needed or creates unnecessary privacy/security risk.</td><td>Minimize fields, mask where possible, or use synthetic data for demonstration.</td></tr>
       </tbody></table>
-      <h2>Recommended decision outcomes</h2>
+      <h2>Decision outcomes</h2>
       <table><thead><tr><th>Outcome</th><th>Use when</th><th>Next action</th></tr></thead><tbody>
-      <tr><td>Proceed</td><td>Criteria are mostly strong.</td><td>Request data and define validation checks.</td></tr>
-      <tr><td>Narrow scope</td><td>The idea is promising but too broad.</td><td>Reduce the population, question, or data fields.</td></tr>
-      <tr><td>Feasibility first</td><td>Data access or quality is uncertain.</td><td>Request a small extract or metadata sample.</td></tr>
-      <tr><td>Exploratory only</td><td>No reliable threshold exists, but patterns may inform planning.</td><td>Label outputs as hypothesis-generating, not audit findings.</td></tr>
+      <tr><td>Proceed</td><td>The question is clear, measurable, valuable, and data appears feasible.</td><td>Request data and define validation checks.</td></tr>
+      <tr><td>Narrow scope</td><td>The idea is promising but too broad.</td><td>Reduce the population, period, question, or required fields.</td></tr>
+      <tr><td>Feasibility first</td><td>The question is valid but data access, completeness, or field meaning is uncertain.</td><td>Request metadata, a field list, row counts, or a small extract before full analysis.</td></tr>
+      <tr><td>Exploratory only</td><td>No reliable rule or threshold exists, but pattern-finding may inform planning.</td><td>Label outputs as hypothesis-generating, not audit findings.</td></tr>
       <tr><td>Stop</td><td>Audit value is weak or data risk is disproportionate.</td><td>Use another audit procedure.</td></tr>
       </tbody></table>
+      <h2>Example: from vague idea to analyzable question</h2>
+      <p>Weak question:</p>
+      <blockquote>Can we identify high-risk vendor payments?</blockquote>
+      <p>This is too broad. It does not define the population, expected behavior, data fields, or how the result would be used.</p>
+      <p>Better question after applying the gate:</p>
+      <blockquote>For vendor payments above CHF 50,000, identify cases where approval occurred after the payment date, the approver was not in the authorized approver list, or the requester and approver were the same person.</blockquote>
+      <p>This is suitable for analysis because it defines:</p>
+      <ul>
+      <li>Population: vendor payments above CHF 50,000.</li>
+      <li>Expected behavior: approval before payment by an authorized approver with segregation of duties.</li>
+      <li>Required fields: payment date, amount, requester, approver, approval timestamp, approval status, approver role, and authorization list.</li>
+      <li>Exception logic: late approval, unauthorized approver, or same requester/approver.</li>
+      <li>Audit use: risk-based sample selection, control testing, or stakeholder discussion.</li>
+      </ul>
       <h2>Questions to ask before requesting data</h2>
       <ol>
       <li>What audit objective does this analysis support?</li>
@@ -43,6 +67,7 @@
       </ol>
       <h2>Link to the four-phase methodology</h2>
       <p>This gate belongs in Phase 1 before full data request and acquisition. If the answer is “feasibility first,” run a small Phase 2 validation loop before building Phase 3 scripts.</p>
+      <p>After analysis is performed, use the <a href="./analytics_evidence_quality_gate.html">Analytics Evidence Quality Gate</a> before relying on the output for planning conclusions, control testing, or reportable findings.</p>
     </article>
   </main>
 </body>

@@ -20,7 +20,7 @@ Define the objectives and questions to be addressed by the analytical activities
 		- Exploratory questions
 		- Causal questions
 		- Non-causal questions
-	- 2.2 Apply the [analytics decision gate](./analytics_decision_gate.md) to confirm that the question, measurable expectation, data availability, and audit value justify analysis work
+	- 2.2 Apply the [analytics use-case decision gate](./analytics_decision_gate.md) to confirm that the question, measurable expectation, data availability, and audit value justify analysis work
 	- 2.3 Prioritize questions based on risk assessment and audit objectives
 	- 2.4 Recognize that questions may evolve throughout the analysis process
 

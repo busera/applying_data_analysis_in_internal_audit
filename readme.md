@@ -2,7 +2,7 @@
 
 This repository is an early-stage practical guide for applying data analysis in internal audit. It focuses on the step that is often weak in audit analytics work: translating audit objectives, risks, and controls into answerable analytical questions, data requirements, reproducible tests, and communicable results.
 
-The project currently contains methodology notes and practical guidance. Planned additions include synthetic datasets, Python notebooks, reusable templates, and visualizations.
+The project currently contains methodology notes, practical guidance, templates, one synthetic dataset, and one worked example. Planned additions include Python notebooks, reusable checks, visualizations, and more end-to-end examples.
 
 ## Status
 
@@ -12,12 +12,12 @@ What exists now:
 - A four-phase methodology for audit analytics work.
 - A workflow from audit objective setting to communication of results.
 - Guidance on formulating confirmatory, exploratory, causal, and non-causal questions.
-- Decision gates for deciding whether data analysis is worth pursuing in a specific audit context.
+- A use-case decision gate for deciding whether data analysis is worth pursuing in a specific audit context.
+- An evidence-quality gate for deciding whether analytical output is reliable enough for planning, testing, or reporting.
 - Reproducibility, evidence-strength, and confidentiality guidance.
-- Initial templates and a worked example structure.
+- Initial templates, a synthetic dataset, and a worked example.
 
 Planned next additions:
-- Synthetic audit datasets.
 - Python examples and notebooks.
 - Reusable data quality checks.
 - Example visualizations.
@@ -32,10 +32,11 @@ Planned next additions:
 
 Supporting guides:
 - [Methodology overview](./methodology/00_methodology.md)
-- [Analytics decision gate](./methodology/analytics_decision_gate.md)
-- [Formulating initial questions and hypotheses](./methodology/2.0_define_da_questions/00_define_da_questions.md)
+- [Analytics use-case decision gate](./methodology/analytics_decision_gate.md)
+- [Analytics evidence quality gate](./methodology/analytics_evidence_quality_gate.md)
 - [Data governance and reproducibility](./methodology/data_governance_reproducibility.md)
 - [Evidence strength and reporting threshold](./methodology/evidence_strength.md)
+- [Question design guide](./methodology/2.0_define_da_questions/00_define_da_questions.md)
 
 ## Workflow
 
