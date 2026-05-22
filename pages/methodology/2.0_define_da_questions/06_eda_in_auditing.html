@@ -3,29 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>06 Eda In Auditing | Applying Data Analysis in Internal Audit</title>
+  <title>Exploratory Data Analysis in Auditing | Applying Data Analysis in Internal Audit</title>
   <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
   <main class="content-page">
     <nav class="breadcrumb"><a href="../../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/2.0_define_da_questions/06_eda_in_auditing.md">Source on GitHub</a></nav>
     <article class="card document">
-      <h2>The Role of Exploratory Data Analysis (EDA)</h2>
-      <p>Exploratory Data Analysis serves as a critical first step in the data analysis process for internal audits, bridging both confirmatory and exploratory approaches.</p>
-      <p>Key EDA Techniques:</p>
+      <h1>Exploratory Data Analysis in Auditing</h1>
+      <p>Exploratory data analysis (EDA) is useful in internal audit, but it should not be treated as a shortcut to findings. Its main role is to understand the population, expose data-quality issues, and generate better questions.</p>
+      <h2>Useful EDA activities</h2>
       <ul>
-      <li>Data quality assessment (missing values, outliers, inconsistencies)</li>
-      <li>Descriptive statistics (mean, median, standard deviation)</li>
-      <li>Data visualization (histograms, scatter plots, box plots)</li>
-      <li>Correlation analysis</li>
+      <li>Profile the population: row counts, periods, entities, transaction types, amounts, statuses, and owners.</li>
+      <li>Check data quality: missing values, duplicates, invalid dates, unexpected categories, and inconsistent identifiers.</li>
+      <li>Understand distributions: amount ranges, processing times, exception rates, and concentration by business unit or owner.</li>
+      <li>Identify outliers and anomalies: unusual timing, amounts, frequencies, relationships, or sequences.</li>
+      <li>Compare groups: business units, systems, vendors, approvers, product groups, or geographies.</li>
+      <li>Refine later tests: convert interesting patterns into confirmatory follow-up questions.</li>
       </ul>
-      <p>EDA in the Audit Process:</p>
-      <ol>
-      <li>Initial Data Exploration: Use EDA to gain insights into the dataset&#x27;s characteristics and potential areas of interest.</li>
-      <li>Hypothesis Refinement: Based on EDA findings, refine existing hypotheses or generate new ones for confirmatory analysis.</li>
-      <li>Anomaly Detection: Identify unusual patterns or outliers that may warrant further investigation.</li>
-      <li>Variable Selection: Determine which variables are most relevant for subsequent analyses.</li>
-      </ol>
+      <h2>Audit value of EDA</h2>
+      <p>EDA can help auditors:</p>
+      <ul>
+      <li>avoid requesting the wrong fields;</li>
+      <li>identify data-quality limitations early;</li>
+      <li>refine scope and sample selection;</li>
+      <li>detect unexpected risk indicators;</li>
+      <li>challenge process-owner narratives; and</li>
+      <li>decide whether full-population testing is feasible.</li>
+      </ul>
+      <h2>Discipline required</h2>
+      <p>EDA outputs should usually be labelled as planning insight, risk indicator, or follow-up lead. To become audit evidence, an EDA pattern must be connected to a criterion, validated against reliable data, and tested with a reproducible procedure.</p>
     </article>
   </main>
 </body>

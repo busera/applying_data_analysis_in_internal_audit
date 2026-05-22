@@ -3,63 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>03 Confirmatory Exploratory Approaches | Applying Data Analysis in Internal Audit</title>
+  <title>Confirmatory vs. Exploratory Questions | Applying Data Analysis in Internal Audit</title>
   <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
   <main class="content-page">
     <nav class="breadcrumb"><a href="../../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/2.0_define_da_questions/03_confirmatory_exploratory_approaches.md">Source on GitHub</a></nav>
     <article class="card document">
-      <h2>Confirmatory vs. Exploratory Approaches in Internal Audit</h2>
-      <p>In internal audit, both confirmatory and exploratory approaches play crucial roles in providing assurance and adding value to the organization.</p>
-      <table><thead><tr><th>Aspect</th><th>Confirmatory Approach</th><th>Exploratory Approach</th></tr></thead><tbody>
-      <tr><td>Starting Point</td><td>Specific hypotheses or expectations</td><td>Open-ended questions or areas of interest</td></tr>
-      <tr><td>Objective</td><td>Verify, confirm, or refute/disprove</td><td>Discover, understand, or generate hypotheses</td></tr>
-      <tr><td>Analytical Methods</td><td>Statistical tests, compliance checking</td><td>Data mining, pattern recognition, advanced analytics</td></tr>
-      <tr><td>Outcomes</td><td>Clear yes/no answers or quantifiable results</td><td>Insights, patterns, or areas for further investigation</td></tr>
+      <h1>Confirmatory vs. Exploratory Questions</h1>
+      <p>Confirmatory and exploratory questions both have a place in internal audit. The mistake is treating them as if they produce the same kind of evidence.</p>
+      <table><thead><tr><th>Dimension</th><th>Confirmatory</th><th>Exploratory</th></tr></thead><tbody>
+      <tr><td>Starting point</td><td>Defined audit objective, risk, control, rule, threshold, or hypothesis</td><td>Open-ended area of interest, unfamiliar process, unexplained risk, or broad population</td></tr>
+      <tr><td>Main purpose</td><td>Test whether expected behavior occurred</td><td>Discover patterns, anomalies, leads, or possible explanations</td></tr>
+      <tr><td>Typical output</td><td>Exception list, exception rate, pass/fail result, trend against a threshold</td><td>Risk indicators, clusters, outliers, correlations, process patterns, questions for follow-up</td></tr>
+      <tr><td>Evidence status</td><td>Can support audit testing if data, logic, and exceptions are validated</td><td>Usually supports planning, scoping, or follow-up; not a finding by itself</td></tr>
+      <tr><td>Main risk</td><td>False comfort if the rule, population, or data quality is wrong</td><td>Overclaiming patterns as conclusions or findings</td></tr>
       </tbody></table>
-      <h3>Confirmatory Approach in Internal Audit</h3>
-      <p>Characteristics:</p>
+      <h2>Confirmatory questions in audit</h2>
+      <p>Use confirmatory questions when the audit team can define the expected behavior before analysis.</p>
+      <p>Good confirmatory questions usually include:</p>
       <ul>
-      <li>Based on specific audit objectives, known risks, or control expectations</li>
-      <li>Often tied to compliance with policies, regulations, or industry standards</li>
-      <li>Typically results in clear, definitive conclusions</li>
-      <li>Uses structured analytical techniques and statistical methods</li>
+      <li>population;</li>
+      <li>period;</li>
+      <li>rule or expectation;</li>
+      <li>exception condition;</li>
+      <li>required fields; and</li>
+      <li>intended audit use.</li>
       </ul>
-      <p>Purpose in Audit:</p>
+      <p>Examples:</p>
       <ul>
-      <li>Verify compliance with policies, laws, and regulations</li>
-      <li>Test the effectiveness of internal controls</li>
-      <li>Validate the accuracy of financial or operational data</li>
-      <li>Confirm that processes are operating as intended</li>
+      <li>Were all payments above CHF 50,000 approved before payment date by an authorized approver?</li>
+      <li>Did terminated users retain system access after their termination date?</li>
+      <li>Were purchase orders created before invoice receipt for all sampled procure-to-pay transactions?</li>
+      <li>Did all privileged-access reviews occur within the required quarterly review window?</li>
       </ul>
-      <p>Example Questions:</p>
+      <p>Confirmatory analysis is often suitable for control testing, compliance testing, full-population exception testing, and targeted sample selection.</p>
+      <h2>Exploratory questions in audit</h2>
+      <p>Use exploratory questions when the audit team needs to understand the data, process, or risk pattern before defining a precise test.</p>
+      <p>Examples:</p>
       <ul>
-      <li>Is the error rate in expense reports less than the 5% threshold set by company policy?</li>
-      <li>Are 100% of transactions over $10,000 approved by an authorized manager?</li>
-      <li>Has the new inventory system reduced stockout incidents by at least 30% as projected?</li>
+      <li>Which transaction types show unusual approval timing patterns?</li>
+      <li>Which vendors have unusual combinations of bank-account changes, payment frequency, and manual payment overrides?</li>
+      <li>How do access-request volumes and approval delays vary by system, role, and business unit?</li>
+      <li>Are there clusters of expense claims with unusual timing, amount, or category patterns?</li>
       </ul>
-      <h3>Exploratory Approach in Internal Audit</h3>
-      <p>Characteristics:</p>
-      <ul>
-      <li>Open-ended and not driven by predefined hypotheses</li>
-      <li>Aims to uncover unknown patterns, trends, or relationships</li>
-      <li>May lead to new lines of inquiry or future audit objectives</li>
-      <li>Often uses more advanced or flexible analytical techniques</li>
-      </ul>
-      <p>Purpose in Audit:</p>
-      <ul>
-      <li>Identify potential risk areas or control weaknesses not previously considered</li>
-      <li>Uncover inefficiencies or opportunities for process improvement</li>
-      <li>Generate insights to inform risk assessment and audit planning</li>
-      <li>Discover unexpected relationships or anomalies for further investigation</li>
-      </ul>
-      <p>Example Questions:</p>
-      <ul>
-      <li>What factors influence the approval patterns for high-value transactions?</li>
-      <li>How do error rates in financial reporting vary across different departments or processes?</li>
-      <li>Are there any unusual patterns in inventory movement that might indicate fraud or inefficiency?</li>
-      </ul>
+      <p>Exploratory analysis is valuable, but the reporting language must be disciplined. Prefer “indicator,” “lead,” “pattern,” or “hypothesis” until follow-up confirms the issue against criteria and source evidence.</p>
+      <h2>Practical rule</h2>
+      <p>If the audit report would say “the control failed because...,” the analysis must be confirmatory or converted into a confirmatory follow-up test. If the output only suggests where to look next, label it exploratory.</p>
     </article>
   </main>
 </body>

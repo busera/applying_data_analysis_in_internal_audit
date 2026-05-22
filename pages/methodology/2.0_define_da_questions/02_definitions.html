@@ -3,40 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>02 Definitions | Applying Data Analysis in Internal Audit</title>
+  <title>Core Definitions | Applying Data Analysis in Internal Audit</title>
   <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
   <main class="content-page">
     <nav class="breadcrumb"><a href="../../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/2.0_define_da_questions/02_definitions.md">Source on GitHub</a></nav>
     <article class="card document">
-      <h2>Definitions</h2>
-      <p>The following definitions are taken from &quot;Classification of different questions&quot; (Section 1.1.2), Card et al. (2021).</p>
-      <p><strong>Confirmatory Questions</strong></p>
+      <h1>Core Definitions</h1>
+      <p>The definitions below are adapted for internal audit from Card, Min, and Serghiou's classification of research questions.</p>
+      <h2>Confirmatory question</h2>
+      <p>A confirmatory question tests a predefined expectation, rule, threshold, or hypothesis.</p>
+      <p>In internal audit, confirmatory questions usually connect directly to:</p>
       <ul>
-      <li>Typically involve a set of hypotheses, including a null hypothesis with one or more alternatives. </li>
-      <li>These questions often require a concrete research design to test these hypotheses and are usually answered via inductive inference. </li>
-      <li>Confirmatory analyses are considered to make a &quot;scientific step forward&quot; and yield &quot;strong inference”. </li>
+      <li>an audit objective;</li>
+      <li>a risk or control expectation;</li>
+      <li>a policy, law, standard, or procedure;</li>
+      <li>a defined population; and</li>
+      <li>specific exception criteria.</li>
       </ul>
-      <p><strong>Exploratory Questions</strong></p>
-      <ul>
-      <li>These questions are not explicitly hypothesis-driven. Instead, they are often considered to be hypothesis-generating. </li>
-      <li>Exploratory analyses do not aim to achieve &quot;strong inference&quot; and may yield a higher false positive rate. </li>
-      <li>However, they are valuable for new discoveries and unexplored topics.</li>
-      </ul>
-      <p><strong>Causal questions</strong></p>
-      <ul>
-      <li>Causal questions aim to draw conclusions about a causal relationship between the indexed exposures and outcomes. </li>
-      <li>They typically include:</li>
-      <li>A well-defined cause</li>
-      <li>A well-defined outcome</li>
-      <li>A scientifically plausible effect on the outcome that can be attributable to the cause</li>
-      </ul>
-      <p><strong>Non-Causal questions</strong></p>
-      <ul>
-      <li>Non-causal questions are typically descriptive or observational/associational. </li>
-      <li>They describe the objective existence of certain phenomena or examine relationships between factors without considering underlying causal mechanisms.</li>
-      </ul>
+      <p>Example:</p>
+      <blockquote>Were all payments above CHF 50,000 approved by an authorized approver before payment date?</blockquote>
+      <h2>Exploratory question</h2>
+      <p>An exploratory question looks for patterns, anomalies, relationships, or risk indicators when the audit team does not yet have a specific testable expectation.</p>
+      <p>Exploratory analysis is useful for planning and discovery, but it is usually hypothesis-generating. It should not be reported as a finding until the pattern is validated against criteria, data quality, and business context.</p>
+      <p>Example:</p>
+      <blockquote>What approval timing patterns appear in high-value payments across business units?</blockquote>
+      <h2>Causal question</h2>
+      <p>A causal question asks whether a change, intervention, or exposure caused an outcome.</p>
+      <p>Causal questions require stronger design than ordinary audit analytics. They need a clear intervention, outcome, timing, comparison logic, and plausible controls for confounding factors.</p>
+      <p>Example:</p>
+      <blockquote>Did introducing automated approval routing reduce late approvals compared with comparable business units that did not implement it?</blockquote>
+      <h2>Non-causal question</h2>
+      <p>A non-causal question describes what exists in the data without claiming that one factor caused another.</p>
+      <p>Most practical audit analytics are non-causal. They describe exceptions, trends, distributions, relationships, process flows, or anomalies.</p>
+      <p>Example:</p>
+      <blockquote>How are late approvals distributed by business unit, approver role, and transaction value?</blockquote>
+      <h2>Important boundary</h2>
+      <p>Question type is not the same as evidence quality. A confirmatory question can still produce weak evidence if the population is incomplete or the logic is wrong. An exploratory question can produce useful planning insight without being strong enough for a finding.</p>
+      <p>Use the <a href="../analytics_evidence_quality_gate.html">Analytics Evidence Quality Gate</a> after analysis to decide how far the result can be relied on.</p>
     </article>
   </main>
 </body>

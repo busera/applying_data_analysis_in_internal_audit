@@ -1,17 +1,16 @@
-## Conclusion
+# Conclusion and Working Rule
 
-This guide has explored four key approaches to data analysis in internal auditing, each serving a distinct purpose:
-- **Confirmatory questions** verify specific hypotheses or compliance with established policies, using techniques like compliance testing, hypothesis testing, and trend analysis to provide assurance on known risks and controls.
-- **Exploratory questions** uncover patterns or relationships in the data without preconceived notions, employing methods such as clustering, correlation analysis, and anomaly detection to identify emerging risks or unknown control weaknesses.
-- **Causal questions** investigate cause-and-effect relationships between variables, utilizing techniques like difference-in-differences analysis and regression analysis to understand the impact of specific factors or interventions.
-- **Non-causal questions** examine relationships or distributions in the data without implying causation, using descriptive statistics and time series analysis to describe complex relationships and patterns within data.
+Question design is a core audit analytics control. Before requesting data or writing scripts, auditors should know what type of question they are asking and what the answer can legitimately support.
 
-By integrating confirmatory, exploratory, causal, and non-causal approaches in internal audit data analysis, auditors can:
-- Provide assurance on known risks and controls (confirmatory)
-- Identify emerging risks or unknown control weaknesses (exploratory)
-- Understand the impact of specific factors or interventions (causal)
-- Describe complex relationships and patterns within data (non-causal)
-- Offer deeper insights into business processes and potential improvements
-- Support a more risk-based and value-added approach to internal auditing
+Working rule:
 
-This multifaceted strategy empowers auditors to move beyond traditional compliance-focused auditing. It enables a more comprehensive understanding of the audited environment, facilitating proactive risk management and strategic decision-making support.
+> If the output will support an audit conclusion, define a confirmatory test against clear criteria. If the output only helps decide where to look next, label it exploratory. If the wording implies cause and effect, raise the evidence bar or rewrite the conclusion as non-causal.
+
+Use the four labels as a practical discipline:
+
+- **Confirmatory**: tests a defined expectation.
+- **Exploratory**: generates leads and hypotheses.
+- **Causal**: evaluates whether an intervention or exposure changed an outcome.
+- **Non-causal**: describes patterns, distributions, relationships, flows, or exceptions.
+
+The point is not classification for its own sake. The point is to prevent overclaiming and to connect each analysis to the right audit use: planning, sample selection, control testing, stakeholder discussion, or reportable finding.

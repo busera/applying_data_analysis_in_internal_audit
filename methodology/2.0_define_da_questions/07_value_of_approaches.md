@@ -1,12 +1,19 @@
-## The Value of Exploratory and Non-Causal Approaches
+# Practical Value and Limitations
 
-In my experience, exploratory and non-causal questions often provide the most valuable insights in internal auditing, particularly in larger organizations. This is due to several factors:
+The four question types create value in different ways.
 
-- Confirmatory questions are typically already addressed and implemented by first and second lines of defense, reducing the need for internal audit to focus heavily on these areas.
-- Causal questions, while valuable, often face practical limitations:
-	- Required data may not be available in sufficient quantity or quality
-	- Results can be challenging to report and communicate, especially when dealing with complex statistical concepts
-- Exploratory and non-causal approaches offer several advantages:
-	- They can uncover unexpected patterns or risks that might be missed by more targeted approaches
-	- They often require less stringent data requirements, making them more practical in many audit contexts
-	- The insights gained can be more easily communicated and actioned by stakeholders
+| Question type | Primary audit value | Main limitation |
+| --- | --- | --- |
+| Confirmatory | Supports assurance over known risks, controls, policies, or thresholds. | Can create false comfort if the rule, data, or population is wrong. |
+| Exploratory | Reveals patterns, anomalies, and emerging risks that were not obvious at planning. | Generates leads; does not by itself prove control failure or root cause. |
+| Causal | Helps assess whether a change or intervention likely affected an outcome. | Requires stronger design, comparison logic, and specialist review. |
+| Non-causal | Describes populations, relationships, distributions, process flows, and concentrations. | Shows what is happening, not why it is happening. |
+
+In many internal audits, the strongest practical sequence is:
+
+1. Use non-causal EDA to understand the population.
+2. Use exploratory analysis to identify risk indicators and refine scope.
+3. Convert the highest-value leads into confirmatory tests.
+4. Use causal analysis only when the audit objective genuinely requires an intervention-effect conclusion and the data/design can support it.
+
+This keeps the audit evidence trail clear: broad exploration informs targeted testing; targeted testing supports conclusions.

@@ -1,15 +1,27 @@
-## The Role of Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis in Auditing
 
-Exploratory Data Analysis serves as a critical first step in the data analysis process for internal audits, bridging both confirmatory and exploratory approaches.
+Exploratory data analysis (EDA) is useful in internal audit, but it should not be treated as a shortcut to findings. Its main role is to understand the population, expose data-quality issues, and generate better questions.
 
-Key EDA Techniques:
-- Data quality assessment (missing values, outliers, inconsistencies)
-- Descriptive statistics (mean, median, standard deviation)
-- Data visualization (histograms, scatter plots, box plots)
-- Correlation analysis
+## Useful EDA activities
 
-EDA in the Audit Process:
-1. Initial Data Exploration: Use EDA to gain insights into the dataset's characteristics and potential areas of interest.
-2. Hypothesis Refinement: Based on EDA findings, refine existing hypotheses or generate new ones for confirmatory analysis.
-3. Anomaly Detection: Identify unusual patterns or outliers that may warrant further investigation.
-4. Variable Selection: Determine which variables are most relevant for subsequent analyses.
+- Profile the population: row counts, periods, entities, transaction types, amounts, statuses, and owners.
+- Check data quality: missing values, duplicates, invalid dates, unexpected categories, and inconsistent identifiers.
+- Understand distributions: amount ranges, processing times, exception rates, and concentration by business unit or owner.
+- Identify outliers and anomalies: unusual timing, amounts, frequencies, relationships, or sequences.
+- Compare groups: business units, systems, vendors, approvers, product groups, or geographies.
+- Refine later tests: convert interesting patterns into confirmatory follow-up questions.
+
+## Audit value of EDA
+
+EDA can help auditors:
+
+- avoid requesting the wrong fields;
+- identify data-quality limitations early;
+- refine scope and sample selection;
+- detect unexpected risk indicators;
+- challenge process-owner narratives; and
+- decide whether full-population testing is feasible.
+
+## Discipline required
+
+EDA outputs should usually be labelled as planning insight, risk indicator, or follow-up lead. To become audit evidence, an EDA pattern must be connected to a criterion, validated against reliable data, and tested with a reproducible procedure.

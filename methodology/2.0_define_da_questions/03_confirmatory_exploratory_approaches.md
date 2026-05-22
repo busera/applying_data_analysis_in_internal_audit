@@ -1,48 +1,50 @@
-## Confirmatory vs. Exploratory Approaches in Internal Audit
+# Confirmatory vs. Exploratory Questions
 
-In internal audit, both confirmatory and exploratory approaches play crucial roles in providing assurance and adding value to the organization.
+Confirmatory and exploratory questions both have a place in internal audit. The mistake is treating them as if they produce the same kind of evidence.
 
-| Aspect             | Confirmatory Approach                        | Exploratory Approach                                   |
-| ------------------ | -------------------------------------------- | ------------------------------------------------------ |
-| Starting Point     | Specific hypotheses or expectations          | Open-ended questions or areas of interest              |
-| Objective          | Verify, confirm, or refute/disprove          | Discover, understand, or generate hypotheses           |
-| Analytical Methods | Statistical tests, compliance checking       | Data mining, pattern recognition, advanced analytics   |
-| Outcomes           | Clear yes/no answers or quantifiable results | Insights, patterns, or areas for further investigation |
+| Dimension | Confirmatory | Exploratory |
+| --- | --- | --- |
+| Starting point | Defined audit objective, risk, control, rule, threshold, or hypothesis | Open-ended area of interest, unfamiliar process, unexplained risk, or broad population |
+| Main purpose | Test whether expected behavior occurred | Discover patterns, anomalies, leads, or possible explanations |
+| Typical output | Exception list, exception rate, pass/fail result, trend against a threshold | Risk indicators, clusters, outliers, correlations, process patterns, questions for follow-up |
+| Evidence status | Can support audit testing if data, logic, and exceptions are validated | Usually supports planning, scoping, or follow-up; not a finding by itself |
+| Main risk | False comfort if the rule, population, or data quality is wrong | Overclaiming patterns as conclusions or findings |
 
-### Confirmatory Approach in Internal Audit
+## Confirmatory questions in audit
 
-Characteristics:
-- Based on specific audit objectives, known risks, or control expectations
-- Often tied to compliance with policies, regulations, or industry standards
-- Typically results in clear, definitive conclusions
-- Uses structured analytical techniques and statistical methods
+Use confirmatory questions when the audit team can define the expected behavior before analysis.
 
-Purpose in Audit:
-- Verify compliance with policies, laws, and regulations
-- Test the effectiveness of internal controls
-- Validate the accuracy of financial or operational data
-- Confirm that processes are operating as intended
+Good confirmatory questions usually include:
 
-Example Questions:
-- Is the error rate in expense reports less than the 5% threshold set by company policy?
-- Are 100% of transactions over $10,000 approved by an authorized manager?
-- Has the new inventory system reduced stockout incidents by at least 30% as projected?
+- population;
+- period;
+- rule or expectation;
+- exception condition;
+- required fields; and
+- intended audit use.
 
-### Exploratory Approach in Internal Audit
+Examples:
 
-Characteristics:
-- Open-ended and not driven by predefined hypotheses
-- Aims to uncover unknown patterns, trends, or relationships
-- May lead to new lines of inquiry or future audit objectives
-- Often uses more advanced or flexible analytical techniques
+- Were all payments above CHF 50,000 approved before payment date by an authorized approver?
+- Did terminated users retain system access after their termination date?
+- Were purchase orders created before invoice receipt for all sampled procure-to-pay transactions?
+- Did all privileged-access reviews occur within the required quarterly review window?
 
-Purpose in Audit:
-- Identify potential risk areas or control weaknesses not previously considered
-- Uncover inefficiencies or opportunities for process improvement
-- Generate insights to inform risk assessment and audit planning
-- Discover unexpected relationships or anomalies for further investigation
+Confirmatory analysis is often suitable for control testing, compliance testing, full-population exception testing, and targeted sample selection.
 
-Example Questions:
-- What factors influence the approval patterns for high-value transactions?
-- How do error rates in financial reporting vary across different departments or processes?
-- Are there any unusual patterns in inventory movement that might indicate fraud or inefficiency?
+## Exploratory questions in audit
+
+Use exploratory questions when the audit team needs to understand the data, process, or risk pattern before defining a precise test.
+
+Examples:
+
+- Which transaction types show unusual approval timing patterns?
+- Which vendors have unusual combinations of bank-account changes, payment frequency, and manual payment overrides?
+- How do access-request volumes and approval delays vary by system, role, and business unit?
+- Are there clusters of expense claims with unusual timing, amount, or category patterns?
+
+Exploratory analysis is valuable, but the reporting language must be disciplined. Prefer “indicator,” “lead,” “pattern,” or “hypothesis” until follow-up confirms the issue against criteria and source evidence.
+
+## Practical rule
+
+If the audit report would say “the control failed because...,” the analysis must be confirmatory or converted into a confirmatory follow-up test. If the output only suggests where to look next, label it exploratory.

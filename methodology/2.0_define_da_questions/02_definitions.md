@@ -1,23 +1,55 @@
-## Definitions
-The following definitions are taken from "Classification of different questions" (Section 1.1.2), Card et al. (2021).
+# Core Definitions
 
- **Confirmatory Questions**
-- Typically involve a set of hypotheses, including a null hypothesis with one or more alternatives. 
-- These questions often require a concrete research design to test these hypotheses and are usually answered via inductive inference. 
-- Confirmatory analyses are considered to make a "scientific step forward" and yield "strong inference”. 
+The definitions below are adapted for internal audit from Card, Min, and Serghiou's classification of research questions.
 
-**Exploratory Questions**
-- These questions are not explicitly hypothesis-driven. Instead, they are often considered to be hypothesis-generating. 
-- Exploratory analyses do not aim to achieve "strong inference" and may yield a higher false positive rate. 
-- However, they are valuable for new discoveries and unexplored topics.
+## Confirmatory question
 
-**Causal questions**
-- Causal questions aim to draw conclusions about a causal relationship between the indexed exposures and outcomes. 
-- They typically include:
-	- A well-defined cause
-	- A well-defined outcome
-	- A scientifically plausible effect on the outcome that can be attributable to the cause
+A confirmatory question tests a predefined expectation, rule, threshold, or hypothesis.
 
-**Non-Causal questions**
-- Non-causal questions are typically descriptive or observational/associational. 
-- They describe the objective existence of certain phenomena or examine relationships between factors without considering underlying causal mechanisms.
+In internal audit, confirmatory questions usually connect directly to:
+
+- an audit objective;
+- a risk or control expectation;
+- a policy, law, standard, or procedure;
+- a defined population; and
+- specific exception criteria.
+
+Example:
+
+> Were all payments above CHF 50,000 approved by an authorized approver before payment date?
+
+## Exploratory question
+
+An exploratory question looks for patterns, anomalies, relationships, or risk indicators when the audit team does not yet have a specific testable expectation.
+
+Exploratory analysis is useful for planning and discovery, but it is usually hypothesis-generating. It should not be reported as a finding until the pattern is validated against criteria, data quality, and business context.
+
+Example:
+
+> What approval timing patterns appear in high-value payments across business units?
+
+## Causal question
+
+A causal question asks whether a change, intervention, or exposure caused an outcome.
+
+Causal questions require stronger design than ordinary audit analytics. They need a clear intervention, outcome, timing, comparison logic, and plausible controls for confounding factors.
+
+Example:
+
+> Did introducing automated approval routing reduce late approvals compared with comparable business units that did not implement it?
+
+## Non-causal question
+
+A non-causal question describes what exists in the data without claiming that one factor caused another.
+
+Most practical audit analytics are non-causal. They describe exceptions, trends, distributions, relationships, process flows, or anomalies.
+
+Example:
+
+> How are late approvals distributed by business unit, approver role, and transaction value?
+
+## Important boundary
+
+Question type is not the same as evidence quality. A confirmatory question can still produce weak evidence if the population is incomplete or the logic is wrong. An exploratory question can produce useful planning insight without being strong enough for a finding.
+
+Use the [Analytics Evidence Quality Gate](../analytics_evidence_quality_gate.md) after analysis to decide how far the result can be relied on.

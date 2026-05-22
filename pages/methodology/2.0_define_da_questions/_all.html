@@ -3,245 +3,240 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> All | Applying Data Analysis in Internal Audit</title>
+  <title>Introduction and Purpose | Applying Data Analysis in Internal Audit</title>
   <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
   <main class="content-page">
     <nav class="breadcrumb"><a href="../../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/2.0_define_da_questions/_all.md">Source on GitHub</a></nav>
     <article class="card document">
-      <h2>Introduction &amp; Problem Statement</h2>
-      <p>The application of data analysis in internal audit has been a topic of increasing interest and discussion in recent months. While numerous knowledge briefs and guides are available from respected organizations like the IIA[^1] and ISACA[^2][^3][^4], these resources often present a more high-level and generic approach. As a professional with a background in data science, I&#x27;ve found that many existing resources in this area lack some depth and specificity to better bridge the gap between data analysis theory and its practical application in internal audit.</p>
-      <p>This observation has motivated me to create this comprehensive guide. This guide explores the application of data analysis techniques in internal auditing, adapting key concepts from academic research methodologies[^5] to the practical world of internal audit focusing on two distinct concepts:</p>
+      <h1>Introduction and Purpose</h1>
+      <p>Internal audit data analysis often fails before the first script is written. The usual problem is not the tool; it is an unclear audit question.</p>
+      <p>A weak question sounds like:</p>
+      <blockquote>Can we analyze purchase orders?</blockquote>
+      <p>A stronger question sounds like:</p>
+      <blockquote>For purchase orders above CHF 50,000 created during the audit period, identify cases where approval occurred after release, the approver was not authorized for the amount, or the requester and approver were the same person.</blockquote>
+      <p>The second version is usable because it defines the population, expected behavior, exception logic, required fields, and audit purpose.</p>
+      <p>This section adapts research-methodology distinctions from Card, Min, and Serghiou's <em>Open, rigorous and reproducible research</em> to internal audit practice. The goal is not to make every audit analysis academic. The goal is to help auditors label the type of question they are asking, choose a suitable analytical approach, and avoid overstating what the data can prove.</p>
+      <p>The two core distinctions are:</p>
       <ul>
-      <li>Confirmatory vs. Exploratory Questions</li>
-      <li>Causal vs. Non-Causal Questions</li>
+      <li><strong>Confirmatory vs. exploratory</strong>: Are we testing a defined expectation, or looking for patterns and leads?</li>
+      <li><strong>Causal vs. non-causal</strong>: Are we trying to assess an intervention's effect, or describe relationships, distributions, and exceptions?</li>
       </ul>
-      <p>To further bridge the gap between theory and practice, this repository will collect practical examples, synthetic datasets, Python code, and visualizations for audit analytics work.</p>
-      <p>[^1]: IIA Knowledge Briefs: Data Analytics, Parts 1-3. https://www.theiia.org/en/content/articles/global-perspectives-and-insights/2023/GlobalPerspectivesInsightsDataAnalyticsParts1-3/</p>
-      <p>[^2]: Internal Audit Data Analytics for Beginners. https://www.isaca.org/resources/news-and-trends/industry-news/2023/internal-audit-data-analytics-for-beginners</p>
-      <p>[^3]: Seven Steps to Empowerment With Data Analytics. https://www.isaca.org/resources/news-and-trends/newsletters/atisaca/2023/volume-34/seven-steps-to-empowerment-with-data-analytics</p>
-      <p>[^4]: Advanced Data Analytics for IT Auditors. https://www.isaca.org/resources/isaca-journal/issues/2016/volume-6/advanced-data-analytics-for-it-auditors</p>
-      <p>[^5]:	Card, D., Min, Y., &amp; Serghiou, S. (2021, December 14). Open, rigorous and reproducible research: A practitioner&#x27;s handbook. Stanford Data Science. https://stanforddatascience.github.io</p>
-      <h2>Definitions</h2>
-      <p>The following definitions are taken from &quot;Classification of different questions&quot; (Section 1.1.2), Card et al. (2021).</p>
-      <p><strong>Confirmatory Questions</strong></p>
+      <p>These distinctions matter because they affect data requirements, evidence strength, reporting language, and whether the output can support an audit conclusion or only a planning lead.</p>
+      <h1>Core Definitions</h1>
+      <p>The definitions below are adapted for internal audit from Card, Min, and Serghiou's classification of research questions.</p>
+      <h2>Confirmatory question</h2>
+      <p>A confirmatory question tests a predefined expectation, rule, threshold, or hypothesis.</p>
+      <p>In internal audit, confirmatory questions usually connect directly to:</p>
       <ul>
-      <li>Typically involve a set of hypotheses, including a null hypothesis with one or more alternatives. </li>
-      <li>These questions often require a concrete research design to test these hypotheses and are usually answered via inductive inference. </li>
-      <li>Confirmatory analyses are considered to make a &quot;scientific step forward&quot; and yield &quot;strong inference”. </li>
+      <li>an audit objective;</li>
+      <li>a risk or control expectation;</li>
+      <li>a policy, law, standard, or procedure;</li>
+      <li>a defined population; and</li>
+      <li>specific exception criteria.</li>
       </ul>
-      <p><strong>Exploratory Questions</strong></p>
-      <ul>
-      <li>These questions are not explicitly hypothesis-driven. Instead, they are often considered to be hypothesis-generating. </li>
-      <li>Exploratory analyses do not aim to achieve &quot;strong inference&quot; and may yield a higher false positive rate. </li>
-      <li>However, they are valuable for new discoveries and unexplored topics.</li>
-      </ul>
-      <p><strong>Causal questions</strong></p>
-      <ul>
-      <li>Causal questions aim to draw conclusions about a causal relationship between the indexed exposures and outcomes. </li>
-      <li>They typically include:</li>
-      <li>A well-defined cause</li>
-      <li>A well-defined outcome</li>
-      <li>A scientifically plausible effect on the outcome that can be attributable to the cause</li>
-      </ul>
-      <p><strong>Non-Causal questions</strong></p>
-      <ul>
-      <li>Non-causal questions are typically descriptive or observational/associational. </li>
-      <li>They describe the objective existence of certain phenomena or examine relationships between factors without considering underlying causal mechanisms.</li>
-      </ul>
-      <h2>Confirmatory vs. Exploratory Approaches in Internal Audit</h2>
-      <p>In internal audit, both confirmatory and exploratory approaches play crucial roles in providing assurance and adding value to the organization.</p>
-      <table><thead><tr><th>Aspect</th><th>Confirmatory Approach</th><th>Exploratory Approach</th></tr></thead><tbody>
-      <tr><td>Starting Point</td><td>Specific hypotheses or expectations</td><td>Open-ended questions or areas of interest</td></tr>
-      <tr><td>Objective</td><td>Verify, confirm, or refute/disprove</td><td>Discover, understand, or generate hypotheses</td></tr>
-      <tr><td>Analytical Methods</td><td>Statistical tests, compliance checking</td><td>Data mining, pattern recognition, advanced analytics</td></tr>
-      <tr><td>Outcomes</td><td>Clear yes/no answers or quantifiable results</td><td>Insights, patterns, or areas for further investigation</td></tr>
+      <p>Example:</p>
+      <blockquote>Were all payments above CHF 50,000 approved by an authorized approver before payment date?</blockquote>
+      <h2>Exploratory question</h2>
+      <p>An exploratory question looks for patterns, anomalies, relationships, or risk indicators when the audit team does not yet have a specific testable expectation.</p>
+      <p>Exploratory analysis is useful for planning and discovery, but it is usually hypothesis-generating. It should not be reported as a finding until the pattern is validated against criteria, data quality, and business context.</p>
+      <p>Example:</p>
+      <blockquote>What approval timing patterns appear in high-value payments across business units?</blockquote>
+      <h2>Causal question</h2>
+      <p>A causal question asks whether a change, intervention, or exposure caused an outcome.</p>
+      <p>Causal questions require stronger design than ordinary audit analytics. They need a clear intervention, outcome, timing, comparison logic, and plausible controls for confounding factors.</p>
+      <p>Example:</p>
+      <blockquote>Did introducing automated approval routing reduce late approvals compared with comparable business units that did not implement it?</blockquote>
+      <h2>Non-causal question</h2>
+      <p>A non-causal question describes what exists in the data without claiming that one factor caused another.</p>
+      <p>Most practical audit analytics are non-causal. They describe exceptions, trends, distributions, relationships, process flows, or anomalies.</p>
+      <p>Example:</p>
+      <blockquote>How are late approvals distributed by business unit, approver role, and transaction value?</blockquote>
+      <h2>Important boundary</h2>
+      <p>Question type is not the same as evidence quality. A confirmatory question can still produce weak evidence if the population is incomplete or the logic is wrong. An exploratory question can produce useful planning insight without being strong enough for a finding.</p>
+      <p>Use the <a href="../analytics_evidence_quality_gate.html">Analytics Evidence Quality Gate</a> after analysis to decide how far the result can be relied on.</p>
+      <h1>Confirmatory vs. Exploratory Questions</h1>
+      <p>Confirmatory and exploratory questions both have a place in internal audit. The mistake is treating them as if they produce the same kind of evidence.</p>
+      <table><thead><tr><th>Dimension</th><th>Confirmatory</th><th>Exploratory</th></tr></thead><tbody>
+      <tr><td>Starting point</td><td>Defined audit objective, risk, control, rule, threshold, or hypothesis</td><td>Open-ended area of interest, unfamiliar process, unexplained risk, or broad population</td></tr>
+      <tr><td>Main purpose</td><td>Test whether expected behavior occurred</td><td>Discover patterns, anomalies, leads, or possible explanations</td></tr>
+      <tr><td>Typical output</td><td>Exception list, exception rate, pass/fail result, trend against a threshold</td><td>Risk indicators, clusters, outliers, correlations, process patterns, questions for follow-up</td></tr>
+      <tr><td>Evidence status</td><td>Can support audit testing if data, logic, and exceptions are validated</td><td>Usually supports planning, scoping, or follow-up; not a finding by itself</td></tr>
+      <tr><td>Main risk</td><td>False comfort if the rule, population, or data quality is wrong</td><td>Overclaiming patterns as conclusions or findings</td></tr>
       </tbody></table>
-      <h3>Confirmatory Approach in Internal Audit</h3>
-      <p>Characteristics:</p>
+      <h2>Confirmatory questions in audit</h2>
+      <p>Use confirmatory questions when the audit team can define the expected behavior before analysis.</p>
+      <p>Good confirmatory questions usually include:</p>
       <ul>
-      <li>Based on specific audit objectives, known risks, or control expectations</li>
-      <li>Often tied to compliance with policies, regulations, or industry standards</li>
-      <li>Typically results in clear, definitive conclusions</li>
-      <li>Uses structured analytical techniques and statistical methods</li>
+      <li>population;</li>
+      <li>period;</li>
+      <li>rule or expectation;</li>
+      <li>exception condition;</li>
+      <li>required fields; and</li>
+      <li>intended audit use.</li>
       </ul>
-      <p>Purpose in Audit:</p>
+      <p>Examples:</p>
       <ul>
-      <li>Verify compliance with policies, laws, and regulations</li>
-      <li>Test the effectiveness of internal controls</li>
-      <li>Validate the accuracy of financial or operational data</li>
-      <li>Confirm that processes are operating as intended</li>
+      <li>Were all payments above CHF 50,000 approved before payment date by an authorized approver?</li>
+      <li>Did terminated users retain system access after their termination date?</li>
+      <li>Were purchase orders created before invoice receipt for all sampled procure-to-pay transactions?</li>
+      <li>Did all privileged-access reviews occur within the required quarterly review window?</li>
       </ul>
-      <p>Example Questions:</p>
+      <p>Confirmatory analysis is often suitable for control testing, compliance testing, full-population exception testing, and targeted sample selection.</p>
+      <h2>Exploratory questions in audit</h2>
+      <p>Use exploratory questions when the audit team needs to understand the data, process, or risk pattern before defining a precise test.</p>
+      <p>Examples:</p>
       <ul>
-      <li>Is the error rate in expense reports less than the 5% threshold set by company policy?</li>
-      <li>Are 100% of transactions over $10,000 approved by an authorized manager?</li>
-      <li>Has the new inventory system reduced stockout incidents by at least 30% as projected?</li>
+      <li>Which transaction types show unusual approval timing patterns?</li>
+      <li>Which vendors have unusual combinations of bank-account changes, payment frequency, and manual payment overrides?</li>
+      <li>How do access-request volumes and approval delays vary by system, role, and business unit?</li>
+      <li>Are there clusters of expense claims with unusual timing, amount, or category patterns?</li>
       </ul>
-      <h3>Exploratory Approach in Internal Audit</h3>
-      <p>Characteristics:</p>
+      <p>Exploratory analysis is valuable, but the reporting language must be disciplined. Prefer “indicator,” “lead,” “pattern,” or “hypothesis” until follow-up confirms the issue against criteria and source evidence.</p>
+      <h2>Practical rule</h2>
+      <p>If the audit report would say “the control failed because...,” the analysis must be confirmatory or converted into a confirmatory follow-up test. If the output only suggests where to look next, label it exploratory.</p>
+      <h1>Causal vs. Non-Causal Questions</h1>
+      <p>Most internal audit analytics should be framed as non-causal unless the audit team has a defensible design for causal inference.</p>
+      <h2>Causal questions</h2>
+      <p>A causal question asks whether an intervention or exposure changed an outcome.</p>
+      <p>Examples:</p>
       <ul>
-      <li>Open-ended and not driven by predefined hypotheses</li>
-      <li>Aims to uncover unknown patterns, trends, or relationships</li>
-      <li>May lead to new lines of inquiry or future audit objectives</li>
-      <li>Often uses more advanced or flexible analytical techniques</li>
+      <li>Did the new approval workflow reduce late approvals?</li>
+      <li>Did automated three-way matching reduce invoice exceptions?</li>
+      <li>Did a training program reduce policy violations?</li>
+      <li>Did introducing continuous monitoring reduce repeat control failures?</li>
       </ul>
-      <p>Purpose in Audit:</p>
+      <p>Causal questions require more than a before/after chart. At minimum, the audit team should consider:</p>
       <ul>
-      <li>Identify potential risk areas or control weaknesses not previously considered</li>
-      <li>Uncover inefficiencies or opportunities for process improvement</li>
-      <li>Generate insights to inform risk assessment and audit planning</li>
-      <li>Discover unexpected relationships or anomalies for further investigation</li>
+      <li>the intervention date and affected population;</li>
+      <li>a credible comparison group or baseline;</li>
+      <li>other changes that occurred at the same time;</li>
+      <li>data quality before and after the intervention;</li>
+      <li>whether the outcome definition stayed stable; and</li>
+      <li>whether observed changes could be explained by volume, mix, seasonality, staffing, system migration, or policy changes.</li>
       </ul>
-      <p>Example Questions:</p>
+      <p>Common causal designs include interrupted time-series analysis, difference-in-differences, regression discontinuity, matching, and controlled before/after comparisons. These methods are useful, but they usually require specialist review before being used for strong conclusions.</p>
+      <h2>Non-causal questions</h2>
+      <p>A non-causal question describes patterns, exceptions, relationships, distributions, or flows without claiming that one thing caused another.</p>
+      <p>Examples:</p>
       <ul>
-      <li>What factors influence the approval patterns for high-value transactions?</li>
-      <li>How do error rates in financial reporting vary across different departments or processes?</li>
-      <li>Are there any unusual patterns in inventory movement that might indicate fraud or inefficiency?</li>
+      <li>What percentage of payments were approved after payment date?</li>
+      <li>Which business units have the highest late-approval rate?</li>
+      <li>How are approval delays distributed by approver role and transaction amount?</li>
+      <li>Which vendors share bank accounts or addresses?</li>
+      <li>How do access requests flow through approval steps?</li>
       </ul>
-      <h2>Causal vs. Non-Causal Data Analysis in Internal Audit</h2>
-      <h3>Causal Data Analysis</h3>
-      <p>Aims to establish cause-effect relationships between variables.</p>
-      <p>Techniques:</p>
+      <p>Non-causal analysis is often the right choice for audit work because it aligns with practical audit purposes: identifying exceptions, understanding populations, selecting samples, prioritizing follow-up, and communicating risk patterns.</p>
+      <h2>Reporting discipline</h2>
+      <p>Do not write “X caused Y” unless the analysis was designed to support causal inference. Safer language is often:</p>
       <ul>
-      <li>Difference-in-differences analysis</li>
-      <li>Propensity score matching</li>
-      <li>Instrumental variable analysis</li>
-      <li>Regression discontinuity design</li>
+      <li>“was associated with”;</li>
+      <li>“coincided with”;</li>
+      <li>“was higher among”;</li>
+      <li>“was concentrated in”;</li>
+      <li>“indicates a potential risk area”; or</li>
+      <li>“requires follow-up to determine root cause.”</li>
       </ul>
-      <p>Example applications:</p>
-      <ul>
-      <li>Assessing the impact of a new training program on employee productivity</li>
-      <li>Evaluating how changes in credit policies affect bad debt rates</li>
-      <li>Determining the effect of implementing new controls on error rates</li>
-      </ul>
-      <h3>Non-Causal Data Analysis</h3>
-      <p>Describes relationships or current states without implying causation.</p>
-      <p>Techniques:</p>
-      <ul>
-      <li>Descriptive statistics</li>
-      <li>Correlation analysis</li>
-      <li>Time series analysis</li>
-      <li>Network analysis</li>
-      </ul>
-      <p>Example applications:</p>
-      <ul>
-      <li>Mapping the flow of transactions through different systems</li>
-      <li>Analyzing the distribution of processing times for customer requests</li>
-      <li>Identifying correlations between different risk indicators</li>
-      </ul>
-      <h2>Application in Internal Audit Practice</h2>
-      <p>To illustrate how confirmatory, exploratory, causal, and non-causal approaches can be applied in internal audit, let&#x27;s examine some common audit areas.</p>
-      <h3>Example: Expense Report Auditing</h3>
-      <h4>Comparing Question Types</h4>
-      <table><thead><tr><th>Confirmatory</th><th>Exploratory</th><th>Causal</th><th>Non-Causal</th></tr></thead><tbody>
-      <tr><td>Are expense reports compliant with company policy?</td><td>What patterns exist in expense report submissions?</td><td>Does the implementation of automated expense report software reduce error rates?</td><td>What is the distribution of expense report amounts across different departments?</td></tr>
-      <tr><td>Is the error rate in expense reports less than 5%?</td><td>How do error rates vary across departments or expense types?</td><td>What is the effect of managerial review on expense report accuracy?</td><td>How do expense categories correlate with report processing times?</td></tr>
-      <tr><td>Are 100% of expense reports over $1,000 reviewed by a manager within 48 hours?</td><td>Is there a correlation between the complexity of expense reports and the likelihood of errors?</td><td></td><td></td></tr>
+      <h1>Application Examples</h1>
+      <p>The examples below show how the same audit area can produce different question types. The labels matter because they affect what the result can be used for.</p>
+      <h2>Expense reports</h2>
+      <table><thead><tr><th>Type</th><th>Better audit question</th><th>Typical use</th><th>Caution</th></tr></thead><tbody>
+      <tr><td>Confirmatory</td><td>Were all expense reports above CHF 1,000 approved by an authorized manager within 48 hours?</td><td>Control testing or exception testing</td><td>Requires reliable approval timestamp, approver role, and population completeness.</td></tr>
+      <tr><td>Exploratory</td><td>Which expense categories, submitters, or timing patterns show unusual exception rates?</td><td>Planning, scoping, sample selection</td><td>Patterns are leads, not findings, until validated.</td></tr>
+      <tr><td>Causal</td><td>Did implementation of automated expense checks reduce policy violations compared with the prior period or a comparable group?</td><td>Evaluation of process/control change</td><td>Needs comparison logic and controls for volume, policy, and user-mix changes.</td></tr>
+      <tr><td>Non-causal</td><td>How are expense amounts and processing times distributed by category, country, and department?</td><td>Process understanding and risk assessment</td><td>Describes concentration; does not explain why it occurs.</td></tr>
       </tbody></table>
-      <h4>Question Types and Data Analysis Techniques</h4>
-      <table><thead><tr><th>Type</th><th>Example Question</th><th>Data Analysis Techniques</th></tr></thead><tbody>
-      <tr><td>Confirmatory</td><td>Are expense reports compliant with company policy?</td><td>- Compliance testing - Rule-based analysis - Exception reporting</td></tr>
-      <tr><td></td><td>Is the error rate in expense reports less than 5%?</td><td>- Hypothesis testing - Statistical process control - Confidence intervals</td></tr>
-      <tr><td></td><td>Are 100% of expense reports over $1,000 reviewed by a manager within 48 hours?</td><td>- Compliance testing - Process mining - Control effectiveness testing</td></tr>
-      <tr><td></td><td>Has there been a consistent decrease in policy violations over the past year?</td><td>- Trend analysis - Time series decomposition - Regression analysis</td></tr>
-      <tr><td>Exploratory</td><td>What patterns exist in expense report submissions?</td><td>- Clustering - Association rule mining - Sequence analysis</td></tr>
-      <tr><td></td><td>How do error rates vary across departments or expense types?</td><td>- Correlation analysis - ANOVA - Heat map visualization</td></tr>
-      <tr><td></td><td>Is there a correlation between the complexity of expense reports and the likelihood of errors?</td><td>- Correlation analysis - Logistic regression - Decision tree analysis</td></tr>
-      <tr><td></td><td>Can we group employees based on their expense report submission patterns?</td><td>- Clustering - K-means analysis - Hierarchical clustering</td></tr>
-      <tr><td></td><td>Are there any unusual or suspicious patterns in expense report submissions?</td><td>- Anomaly detection - Outlier analysis - Network analysis</td></tr>
-      <tr><td>Causal</td><td>Does the implementation of automated expense report software reduce error rates?</td><td>- Difference-in-differences analysis - Propensity score matching - Interrupted time series analysis</td></tr>
-      <tr><td></td><td>What is the effect of managerial review on expense report accuracy?</td><td>- Regression analysis - Structural equation modelling - Causal inference techniques</td></tr>
-      <tr><td>Non-Causal</td><td>What is the distribution of expense report amounts across different departments?</td><td>- Descriptive statistics - Box plot analysis - Kernel density estimation</td></tr>
-      <tr><td></td><td>How do expense categories correlate with report processing times?</td><td>- Time series analysis - Cross-correlation analysis - Scatter plot matrix</td></tr>
+      <h2>Inventory management</h2>
+      <table><thead><tr><th>Type</th><th>Better audit question</th><th>Typical use</th><th>Caution</th></tr></thead><tbody>
+      <tr><td>Confirmatory</td><td>Were high-priority items replenished within 24 hours after reaching the reorder point?</td><td>Control testing</td><td>Requires accurate reorder-point, priority, stock-level, and replenishment timestamps.</td></tr>
+      <tr><td>Exploratory</td><td>Which product/location combinations show unusual stockout or adjustment patterns?</td><td>Planning and follow-up targeting</td><td>Outliers may reflect seasonality, product lifecycle, or data-entry practices.</td></tr>
+      <tr><td>Causal</td><td>Did RFID implementation improve inventory accuracy compared with similar locations without RFID?</td><td>Evaluation of intervention effect</td><td>Needs a credible comparison group and stable accuracy measurement.</td></tr>
+      <tr><td>Non-causal</td><td>How do inventory adjustments vary by location, product group, and adjustment reason?</td><td>Population understanding and risk assessment</td><td>Shows where differences exist, not what caused them.</td></tr>
       </tbody></table>
-      <h3>Example: Inventory Management Auditing</h3>
-      <h4>Comparing Question Types</h4>
-      <table><thead><tr><th>Confirmatory Approach</th><th>Exploratory Approach</th><th>Causal Analysis</th><th>Non-Causal Analysis</th></tr></thead><tbody>
-      <tr><td>Has the new inventory system reduced stockout incidents by at least 30%?</td><td>What factors influence stockout incidents?</td><td>What is the impact of implementing RFID technology on inventory accuracy?</td><td>What is the relationship between inventory levels and sales patterns?</td></tr>
-      <tr><td>Is the inventory turnover ratio within industry benchmarks?</td><td>How does inventory accuracy vary across different product categories or locations?</td><td>How does the frequency of cycle counts affect inventory discrepancies?</td><td>How do lead times vary across different suppliers?</td></tr>
-      <tr><td>Are 95% of high-priority items restocked within 24 hours of reaching the reorder point?</td><td>What patterns emerge in slow-moving inventory items?</td><td></td></tr>
+      <h2>High-value transactions</h2>
+      <table><thead><tr><th>Type</th><th>Better audit question</th><th>Typical use</th><th>Caution</th></tr></thead><tbody>
+      <tr><td>Confirmatory</td><td>Were all transactions above CHF 50,000 approved before payment by an authorized approver who was not the requester?</td><td>Control testing or full-population exception testing</td><td>Requires approval hierarchy, requester, approver, payment date, and approval timestamp.</td></tr>
+      <tr><td>Exploratory</td><td>What timing, approver, requester, vendor, or business-unit patterns appear in high-value transactions?</td><td>Risk-based sample selection</td><td>Avoid implying fraud or control failure from pattern detection alone.</td></tr>
+      <tr><td>Causal</td><td>Did the new multi-level approval workflow reduce unauthorized or late approvals?</td><td>Assessment of control-design change</td><td>Needs pre/post design, comparison logic, and stable exception definitions.</td></tr>
+      <tr><td>Non-causal</td><td>How do high-value transactions flow through departments, approver roles, and payment channels?</td><td>Process understanding and bottleneck/risk identification</td><td>Flow analysis does not prove root cause.</td></tr>
       </tbody></table>
-      <h4>Question Types and Data Analysis Techniques</h4>
-      <table><thead><tr><th>Type</th><th>Example Question</th><th>Data Analysis Technique</th></tr></thead><tbody>
-      <tr><td>Confirmatory</td><td>Has the new inventory system reduced stockout incidents by at least 30%?</td><td>- Hypothesis testing - Trend analysis - Statistical process control</td></tr>
-      <tr><td></td><td>Is the inventory turnover ratio within industry benchmarks?</td><td>- Ratio analysis - Benchmarking - Z-score analysis</td></tr>
-      <tr><td></td><td>Are 95% of high-priority items restocked within 24 hours of reaching the reorder point?</td><td>- Compliance testing - Process capability analysis - Control charts</td></tr>
-      <tr><td>Exploratory</td><td>What factors influence stockout incidents?</td><td>- Root cause analysis - Decision tree analysis Factor analysis</td></tr>
-      <tr><td></td><td>How does inventory accuracy vary across different product categories or locations?</td><td>- Cluster analysis - Heat mapping - Variance analysis</td></tr>
-      <tr><td></td><td>What patterns emerge in slow-moving inventory items?</td><td>- Time series analysis - Pattern recognition algorithms - Association rule mining</td></tr>
-      <tr><td>Causal</td><td>What is the impact of implementing RFID technology on inventory accuracy?</td><td>- Difference-in-differences analysis - Regression discontinuity design - Propensity score matching</td></tr>
-      <tr><td></td><td>How does the frequency of cycle counts affect inventory discrepancies?</td><td>- Regression analysis - Structural equation modelling - Instrumental variable analysis</td></tr>
-      <tr><td>Non-Causal</td><td>What is the relationship between inventory levels and sales patterns?</td><td>- Correlation analysis - Scatter plot analysis - Cross-tabulation</td></tr>
-      <tr><td></td><td>How do lead times vary across different suppliers?</td><td>- Descriptive statistics - Box plot analysis - Histogram analysis</td></tr>
+      <h2>Access management</h2>
+      <table><thead><tr><th>Type</th><th>Better audit question</th><th>Typical use</th><th>Caution</th></tr></thead><tbody>
+      <tr><td>Confirmatory</td><td>Were terminated users disabled within the required timeframe across all in-scope applications?</td><td>Access control testing</td><td>Requires reliable HR termination dates, user mapping, system logs, and scope definition.</td></tr>
+      <tr><td>Exploratory</td><td>Which systems, roles, or user groups show unusual access-change patterns?</td><td>Planning or deep-dive selection</td><td>Unusual activity may reflect project work, migrations, or support accounts.</td></tr>
+      <tr><td>Causal</td><td>Did automated deprovisioning reduce late access removals?</td><td>Evaluation of control automation</td><td>Needs pre/post and comparison logic; system migrations can confound results.</td></tr>
+      <tr><td>Non-causal</td><td>How many privileged accounts exist by system, owner, role, and last-login date?</td><td>Risk assessment and inventory understanding</td><td>Descriptive inventory does not prove inappropriate access.</td></tr>
       </tbody></table>
-      <h3>Example: High-Value Transactions Auditing</h3>
-      <h4>Comparing Question Types</h4>
-      <table><thead><tr><th>Confirmatory Approach</th><th>Exploratory Approach</th><th>Causal Analysis</th><th>Non-Causal Analysis</th></tr></thead><tbody>
-      <tr><td>Are 100% of transactions over $10,000 approved by an authorized manager?</td><td>What patterns exist in high-value transaction approvals?</td><td>Does implementing a multi-level approval process reduce the rate of fraudulent transactions?</td><td>How do high-value transactions flow through different departments?</td></tr>
-      <tr><td>Has the rate of policy exceptions for high-value transactions decreased?</td><td>Are there any unusual timing patterns in high-value transactions?</td><td>What is the effect of real-time monitoring on policy exception rates?</td><td>What is the distribution of transaction values across different business units?</td></tr>
-      <tr><td>Is there two-factor authentication for all transactions exceeding $50,000?</td><td>Is there a correlation between transaction value and the number of approvals required?</td><td></td><td></td></tr>
-      </tbody></table>
-      <h4>Question Types and Data Analysis Techniques</h4>
-      <table><thead><tr><th>Type</th><th>Example Question</th><th>Data Analysis Technique</th></tr></thead><tbody>
-      <tr><td>Confirmatory</td><td>Are 100% of transactions over $10,000 approved by an authorized manager?</td><td>- Compliance testing - Exception reporting - Control effectiveness testing</td></tr>
-      <tr><td></td><td>Has the rate of policy exceptions for high-value transactions decreased?</td><td>- Trend analysis - Statistical process control - Regression analysis</td></tr>
-      <tr><td></td><td>Is there two-factor authentication for all transactions exceeding $50,000?</td><td>- Control testing - System configuration review - Log analysis</td></tr>
-      <tr><td>Exploratory</td><td>What patterns exist in high-value transaction approvals?</td><td>- Pattern recognition - Cluster analysis - Association rule mining</td></tr>
-      <tr><td></td><td>Are there any unusual timing patterns in high-value transactions?</td><td>- Time series analysis - Anomaly detection - Seasonal decomposition</td></tr>
-      <tr><td></td><td>Is there a correlation between transaction value and the number of approvals required?</td><td>- Correlation analysis - Scatter plot analysis - Regression analysis</td></tr>
-      <tr><td>Causal</td><td>Does implementing a multi-level approval process reduce the rate of fraudulent transactions?</td><td>- Difference-in-differences analysis - Propensity score matching - Regression discontinuity design</td></tr>
-      <tr><td></td><td>What is the effect of real-time monitoring on policy exception rates?</td><td>- Interrupted time series analysis - Regression analysis - Causal inference techniques</td></tr>
-      <tr><td>Non-Causal</td><td>How do high-value transactions flow through different departments?</td><td>- Process flow analysis - Network analysis - Sankey diagrams</td></tr>
-      <tr><td></td><td>What is the distribution of transaction values across different business units?</td><td>- Descriptive statistics - Histogram analysis - Box plot analysis</td></tr>
-      </tbody></table>
-      <h2>The Role of Exploratory Data Analysis (EDA)</h2>
-      <p>Exploratory Data Analysis serves as a critical first step in the data analysis process for internal audits, bridging both confirmatory and exploratory approaches.</p>
-      <p>Key EDA Techniques:</p>
-      <ul>
-      <li>Data quality assessment (missing values, outliers, inconsistencies)</li>
-      <li>Descriptive statistics (mean, median, standard deviation)</li>
-      <li>Data visualization (histograms, scatter plots, box plots)</li>
-      <li>Correlation analysis</li>
-      </ul>
-      <p>EDA in the Audit Process:</p>
+      <h2>How to use these examples</h2>
+      <p>A practical workflow is:</p>
       <ol>
-      <li>Initial Data Exploration: Use EDA to gain insights into the dataset&#x27;s characteristics and potential areas of interest.</li>
-      <li>Hypothesis Refinement: Based on EDA findings, refine existing hypotheses or generate new ones for confirmatory analysis.</li>
-      <li>Anomaly Detection: Identify unusual patterns or outliers that may warrant further investigation.</li>
-      <li>Variable Selection: Determine which variables are most relevant for subsequent analyses.</li>
+      <li>Start with the audit objective and risk.</li>
+      <li>Draft the confirmatory question if a rule or control expectation exists.</li>
+      <li>Use exploratory questions to understand where risk may be concentrated.</li>
+      <li>Treat causal questions as optional and higher burden.</li>
+      <li>Use non-causal descriptive analysis to explain the population and support scoping.</li>
+      <li>Apply the evidence-quality gate before relying on results for conclusions.</li>
       </ol>
-      <h2>The Value of Exploratory and Non-Causal Approaches</h2>
-      <p>In my experience, exploratory and non-causal questions often provide the most valuable insights in internal auditing, particularly in larger organizations. This is due to several factors:</p>
+      <h1>Exploratory Data Analysis in Auditing</h1>
+      <p>Exploratory data analysis (EDA) is useful in internal audit, but it should not be treated as a shortcut to findings. Its main role is to understand the population, expose data-quality issues, and generate better questions.</p>
+      <h2>Useful EDA activities</h2>
       <ul>
-      <li>Confirmatory questions are typically already addressed and implemented by first and second lines of defense, reducing the need for internal audit to focus heavily on these areas.</li>
-      <li>Causal questions, while valuable, often face practical limitations:</li>
-      <li>Required data may not be available in sufficient quantity or quality</li>
-      <li>Results can be challenging to report and communicate, especially when dealing with complex statistical concepts</li>
-      <li>Exploratory and non-causal approaches offer several advantages:</li>
-      <li>They can uncover unexpected patterns or risks that might be missed by more targeted approaches</li>
-      <li>They often require less stringent data requirements, making them more practical in many audit contexts</li>
-      <li>The insights gained can be more easily communicated and actioned by stakeholders</li>
+      <li>Profile the population: row counts, periods, entities, transaction types, amounts, statuses, and owners.</li>
+      <li>Check data quality: missing values, duplicates, invalid dates, unexpected categories, and inconsistent identifiers.</li>
+      <li>Understand distributions: amount ranges, processing times, exception rates, and concentration by business unit or owner.</li>
+      <li>Identify outliers and anomalies: unusual timing, amounts, frequencies, relationships, or sequences.</li>
+      <li>Compare groups: business units, systems, vendors, approvers, product groups, or geographies.</li>
+      <li>Refine later tests: convert interesting patterns into confirmatory follow-up questions.</li>
       </ul>
-      <h2>Conclusion</h2>
-      <p>This guide has explored four key approaches to data analysis in internal auditing, each serving a distinct purpose:</p>
+      <h2>Audit value of EDA</h2>
+      <p>EDA can help auditors:</p>
       <ul>
-      <li><strong>Confirmatory questions</strong> verify specific hypotheses or compliance with established policies, using techniques like compliance testing, hypothesis testing, and trend analysis to provide assurance on known risks and controls.</li>
-      <li><strong>Exploratory questions</strong> uncover patterns or relationships in the data without preconceived notions, employing methods such as clustering, correlation analysis, and anomaly detection to identify emerging risks or unknown control weaknesses.</li>
-      <li><strong>Causal questions</strong> investigate cause-and-effect relationships between variables, utilizing techniques like difference-in-differences analysis and regression analysis to understand the impact of specific factors or interventions.</li>
-      <li><strong>Non-causal questions</strong> examine relationships or distributions in the data without implying causation, using descriptive statistics and time series analysis to describe complex relationships and patterns within data.</li>
+      <li>avoid requesting the wrong fields;</li>
+      <li>identify data-quality limitations early;</li>
+      <li>refine scope and sample selection;</li>
+      <li>detect unexpected risk indicators;</li>
+      <li>challenge process-owner narratives; and</li>
+      <li>decide whether full-population testing is feasible.</li>
       </ul>
-      <p>By integrating confirmatory, exploratory, causal, and non-causal approaches in internal audit data analysis, auditors can:</p>
+      <h2>Discipline required</h2>
+      <p>EDA outputs should usually be labelled as planning insight, risk indicator, or follow-up lead. To become audit evidence, an EDA pattern must be connected to a criterion, validated against reliable data, and tested with a reproducible procedure.</p>
+      <h1>Practical Value and Limitations</h1>
+      <p>The four question types create value in different ways.</p>
+      <table><thead><tr><th>Question type</th><th>Primary audit value</th><th>Main limitation</th></tr></thead><tbody>
+      <tr><td>Confirmatory</td><td>Supports assurance over known risks, controls, policies, or thresholds.</td><td>Can create false comfort if the rule, data, or population is wrong.</td></tr>
+      <tr><td>Exploratory</td><td>Reveals patterns, anomalies, and emerging risks that were not obvious at planning.</td><td>Generates leads; does not by itself prove control failure or root cause.</td></tr>
+      <tr><td>Causal</td><td>Helps assess whether a change or intervention likely affected an outcome.</td><td>Requires stronger design, comparison logic, and specialist review.</td></tr>
+      <tr><td>Non-causal</td><td>Describes populations, relationships, distributions, process flows, and concentrations.</td><td>Shows what is happening, not why it is happening.</td></tr>
+      </tbody></table>
+      <p>In many internal audits, the strongest practical sequence is:</p>
+      <ol>
+      <li>Use non-causal EDA to understand the population.</li>
+      <li>Use exploratory analysis to identify risk indicators and refine scope.</li>
+      <li>Convert the highest-value leads into confirmatory tests.</li>
+      <li>Use causal analysis only when the audit objective genuinely requires an intervention-effect conclusion and the data/design can support it.</li>
+      </ol>
+      <p>This keeps the audit evidence trail clear: broad exploration informs targeted testing; targeted testing supports conclusions.</p>
+      <h1>Conclusion and Working Rule</h1>
+      <p>Question design is a core audit analytics control. Before requesting data or writing scripts, auditors should know what type of question they are asking and what the answer can legitimately support.</p>
+      <p>Working rule:</p>
+      <blockquote>If the output will support an audit conclusion, define a confirmatory test against clear criteria. If the output only helps decide where to look next, label it exploratory. If the wording implies cause and effect, raise the evidence bar or rewrite the conclusion as non-causal.</blockquote>
+      <p>Use the four labels as a practical discipline:</p>
       <ul>
-      <li>Provide assurance on known risks and controls (confirmatory)</li>
-      <li>Identify emerging risks or unknown control weaknesses (exploratory)</li>
-      <li>Understand the impact of specific factors or interventions (causal)</li>
-      <li>Describe complex relationships and patterns within data (non-causal)</li>
-      <li>Offer deeper insights into business processes and potential improvements</li>
-      <li>Support a more risk-based and value-added approach to internal auditing</li>
+      <li><strong>Confirmatory</strong>: tests a defined expectation.</li>
+      <li><strong>Exploratory</strong>: generates leads and hypotheses.</li>
+      <li><strong>Causal</strong>: evaluates whether an intervention or exposure changed an outcome.</li>
+      <li><strong>Non-causal</strong>: describes patterns, distributions, relationships, flows, or exceptions.</li>
       </ul>
-      <p>This multifaceted strategy empowers auditors to move beyond traditional compliance-focused auditing. It enables a more comprehensive understanding of the audited environment, facilitating proactive risk management and strategic decision-making support.</p>
+      <p>The point is not classification for its own sake. The point is to prevent overclaiming and to connect each analysis to the right audit use: planning, sample selection, control testing, stakeholder discussion, or reportable finding.</p>
+      <h1>References</h1>
+      <ul>
+      <li>Card, D., Min, Y., &amp; Serghiou, S. (2021). <em>Open, rigorous and reproducible research: A practitioner's handbook</em>. Stanford Data Science. https://stanforddatascience.github.io/best-practices/</li>
+      <li>The Institute of Internal Auditors. <em>Global Internal Audit Standards</em>. https://www.theiia.org/en/standards/2024-standards/global-internal-audit-standards/</li>
+      <li>Richard, D. (2023). <em>Internal Audit Data Analytics for Beginners</em>. ISACA. https://www.isaca.org/resources/news-and-trends/industry-news/2023/internal-audit-data-analytics-for-beginners</li>
+      <li>ISACA. (2023). <em>Seven Steps to Empowerment With Data Analytics</em>. https://www.isaca.org/resources/news-and-trends/newsletters/atisaca/2023/volume-34/seven-steps-to-empowerment-with-data-analytics</li>
+      <li>University of Washington Interactive Data Lab. <em>Visualization Curriculum</em>. https://idl.uw.edu/visualization-curriculum/</li>
+      </ul>
     </article>
   </main>
 </body>
