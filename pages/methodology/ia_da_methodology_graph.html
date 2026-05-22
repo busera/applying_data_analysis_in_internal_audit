@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ia Da Methodology Graph | Applying Data Analysis in Internal Audit</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <main class="content-page">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/ia_da_methodology_graph.md">Source on GitHub</a></nav>
+    <article class="card document">
+      <pre><code>
+
+
+      flowchart TB
+
+          A[Start]
+
+          F[End]
+
+
+
+          subgraph workflow [&quot; &quot;]
+
+              direction TB
+
+              subgraph Phase1[&quot;Phase 1: Scope &amp; Plan&quot;]
+
+                  direction TB
+
+                  B1[1.0 Initial Objective Setting]
+
+                  B2[2.0 Define Data Analysis Scope and Questions]
+
+                  B3[3.0 Identify Data Requirements]
+
+                  B4[4.0 Stakeholder Engagement]
+
+                  B5[5.0 Data Request and Acquisition]
+
+                  B1 --&gt; B2 --&gt; B3 --&gt; B4 --&gt; B5
+
+              end
+
+
+
+              subgraph Phase2[&quot;Phase 2: Data Collection &amp; Curation&quot;]
+
+                  direction TB
+
+                  C1[6.0 Data Validation and Cleansing]
+
+                  C2[7.0 Data Management]
+
+                  C1 --&gt; C2
+
+              end
+
+
+
+              subgraph Phase3[&quot;Phase 3: Analyze&quot;]
+
+                  direction TB
+
+                  D1[8.0 Conduct Initial EDA]
+
+                  D2[9.0 Develop and Execute Test Scripts and Queries]
+
+                  D3[10.0 Perform Targeted/Focused Analysis]
+
+                  D4[11.0 Interpret &amp; Analyze Results]
+
+                  D5[12.0 Documentation and Iteration]
+
+                  D1 --&gt; D2 --&gt; D3 --&gt; D4 --&gt; D5
+
+              end
+
+
+
+              subgraph Phase4[&quot;Phase 4: Interpretation &amp; Communication&quot;]
+
+                  direction TB
+
+                  E1[13.0 Synthesize and Evaluate Findings]
+
+                  E2[14.0 Prepare and Communicate Results]
+
+                  E3[15.0 Document Technical Details]
+
+                  E1 --&gt; E2 --&gt; E3
+
+              end
+
+          end
+
+
+
+          A --&gt; B1
+
+          B5 --&gt; C1
+
+          C2 --&gt; D1
+
+          D5 --&gt; E1
+
+          E3 --&gt; F
+
+
+
+          %% Additional paths
+
+          D1 -.-&gt; |Refine questions| B2
+
+          D1 -.-&gt; |Revisit data cleansing| C1
+
+
+
+          classDef error stroke:#f00,stroke-width:2px;
+
+          class B2,C1 error;
+
+      </code></pre>
+    </article>
+  </main>
+</body>
+</html>

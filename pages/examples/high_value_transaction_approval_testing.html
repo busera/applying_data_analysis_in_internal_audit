@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>High-Value Transaction Approval Testing | Applying Data Analysis in Internal Audit</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <main class="content-page">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/examples/high_value_transaction_approval_testing.md">Source on GitHub</a></nav>
+    <article class="card document">
+      <h1>High-Value Transaction Approval Testing</h1>
+      <p>This worked example shows how an audit team can turn a control expectation into a reproducible analytical test.</p>
+      <h2>Audit objective</h2>
+      <p>Assess whether high-value transactions were approved by an authorized manager before payment or posting.</p>
+      <h2>Risk and control expectation</h2>
+      <p>Risk: high-value transactions may be processed without appropriate review, increasing the risk of unauthorized payments, fraud, or policy non-compliance.</p>
+      <p>Control expectation: transactions above the defined threshold require documented approval by an authorized manager before the transaction is completed.</p>
+      <h2>Analytics decision gate</h2>
+      <table><thead><tr><th>Question</th><th>Example answer</th></tr></thead><tbody>
+      <tr><td>Is the process and risk clear?</td><td>Yes. The process is transaction approval before posting/payment.</td></tr>
+      <tr><td>Is there a measurable rule?</td><td>Yes. Amount threshold, approval role, and approval timestamp.</td></tr>
+      <tr><td>Is data available?</td><td>Usually from ERP payment tables, workflow logs, and user/role master data.</td></tr>
+      <tr><td>Is the output useful?</td><td>Yes. Exceptions can support targeted testing and follow-up.</td></tr>
+      <tr><td>Are confidentiality risks manageable?</td><td>Yes, if fields are minimized and sensitive vendor/person fields are masked where possible.</td></tr>
+      </tbody></table>
+      <h2>Required data fields</h2>
+      <table><thead><tr><th>Field</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td>transaction_id</td><td>Unique transaction key.</td></tr>
+      <tr><td>transaction_date</td><td>Period and sequence testing.</td></tr>
+      <tr><td>payment_or_posting_date</td><td>Determines whether approval occurred before completion.</td></tr>
+      <tr><td>amount</td><td>Threshold testing.</td></tr>
+      <tr><td>currency</td><td>Threshold normalization if multiple currencies exist.</td></tr>
+      <tr><td>requester_id</td><td>Process context.</td></tr>
+      <tr><td>approver_id</td><td>Approval evidence.</td></tr>
+      <tr><td>approval_timestamp</td><td>Sequence testing.</td></tr>
+      <tr><td>approval_status</td><td>Confirms approval was granted, not rejected or pending.</td></tr>
+      <tr><td>approver_role</td><td>Validates authority.</td></tr>
+      <tr><td>delegation_flag</td><td>Identifies delegated approval cases.</td></tr>
+      </tbody></table>
+      <h2>Example exception logic</h2>
+      <p>A transaction is a potential exception when:</p>
+      <ol>
+      <li>Amount exceeds the approval threshold.</li>
+      <li>No approval record exists; or</li>
+      <li>Approval exists but occurred after payment/posting; or</li>
+      <li>Approver role was not authorized for the threshold; or</li>
+      <li>Approval status was not final/approved.</li>
+      </ol>
+      <h2>Example pseudo-query</h2>
+      <pre><code>
+      select
+
+          transaction_id,
+
+          amount,
+
+          currency,
+
+          payment_or_posting_date,
+
+          approver_id,
+
+          approval_timestamp,
+
+          approval_status,
+
+          approver_role
+
+      from transactions
+
+      where amount &gt; 10000
+
+        and (
+
+            approver_id is null
+
+            or approval_timestamp &gt; payment_or_posting_date
+
+            or approval_status &lt;&gt; &#x27;approved&#x27;
+
+            or approver_role not in (&#x27;manager&#x27;, &#x27;senior_manager&#x27;, &#x27;director&#x27;)
+
+        );
+
+      </code></pre>
+      <h2>Interpretation</h2>
+      <p>Potential exceptions should be reviewed before reporting. Common false-positive causes include emergency approvals, retrospective workflow migration, approved delegations, threshold changes, or approval evidence stored in another system.</p>
+      <h2>Evidence-strength assessment</h2>
+      <p>Strong evidence requires:</p>
+      <ul>
+      <li>Complete transaction population.</li>
+      <li>Validated approval workflow extract.</li>
+      <li>Current and historical role/authority mapping.</li>
+      <li>Reproducible exception logic.</li>
+      <li>Business review of exceptions and false positives.</li>
+      </ul>
+      <p>If role data is stale or approval evidence is incomplete, the result may still be useful for follow-up but should not be reported as a confirmed control failure without additional evidence.</p>
+    </article>
+  </main>
+</body>
+</html>

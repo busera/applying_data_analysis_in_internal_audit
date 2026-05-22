@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Governance and Reproducibility | Applying Data Analysis in Internal Audit</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <main class="content-page">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/data_governance_reproducibility.md">Source on GitHub</a></nav>
+    <article class="card document">
+      <h1>Data Governance and Reproducibility</h1>
+      <p>Data analysis in internal audit should be reproducible, proportionate, and defensible. The goal is not only to produce an output, but to preserve enough evidence for another auditor to understand what was requested, received, transformed, tested, and reported.</p>
+      <h2>Confidentiality and proportionality</h2>
+      <p>Before requesting or handling data, document:</p>
+      <ul>
+      <li>The audit objective supported by the data.</li>
+      <li>The minimum required fields.</li>
+      <li>Fields intentionally excluded because they are unnecessary or sensitive.</li>
+      <li>Data classification and confidentiality requirements.</li>
+      <li>Approved storage location.</li>
+      <li>Access restrictions.</li>
+      <li>Retention and deletion expectations.</li>
+      <li>Whether masking, aggregation, or synthetic data can be used.</li>
+      </ul>
+      <h2>Data receipt record</h2>
+      <p>For each dataset, retain:</p>
+      <table><thead><tr><th>Item</th><th>Description</th></tr></thead><tbody>
+      <tr><td>Source system</td><td>Application, database, report, or data owner source.</td></tr>
+      <tr><td>Data owner</td><td>Person or team responsible for the data.</td></tr>
+      <tr><td>Extract date/time</td><td>When the data was generated or received.</td></tr>
+      <tr><td>Population definition</td><td>What records should be included.</td></tr>
+      <tr><td>Period covered</td><td>Start and end dates.</td></tr>
+      <tr><td>Filters applied</td><td>Any extraction filters or exclusions.</td></tr>
+      <tr><td>Row count</td><td>Number of records received.</td></tr>
+      <tr><td>Field list</td><td>Columns received and their definitions.</td></tr>
+      <tr><td>Transfer method</td><td>How the data was shared.</td></tr>
+      <tr><td>Storage location</td><td>Where the working copy is stored.</td></tr>
+      </tbody></table>
+      <h2>Transformation log</h2>
+      <p>Record every material transformation:</p>
+      <ul>
+      <li>File or table used as input.</li>
+      <li>Transformation step.</li>
+      <li>Rationale.</li>
+      <li>Script/query/notebook reference.</li>
+      <li>Row count before and after.</li>
+      <li>Field changes.</li>
+      <li>Exceptions or rejected records.</li>
+      <li>Reviewer or preparer.</li>
+      </ul>
+      <h2>Reproducibility checklist</h2>
+      <p>Before relying on the output, confirm:</p>
+      <ul>
+      <li>The input data can be traced to source or owner confirmation.</li>
+      <li>The analysis file, script, or notebook is versioned.</li>
+      <li>Package or tool versions are documented where relevant.</li>
+      <li>Manual adjustments are visible and justified.</li>
+      <li>Random processes use fixed seeds or are not material to the conclusion.</li>
+      <li>Intermediate outputs can be regenerated.</li>
+      <li>Final tables/charts can be tied back to the analysis steps.</li>
+      <li>Assumptions and limitations are documented.</li>
+      </ul>
+      <h2>Practical minimum standard</h2>
+      <p>For each analysis, keep enough documentation to answer four questions:</p>
+      <ol>
+      <li>What data did we request and receive?</li>
+      <li>Why was that data appropriate for the audit objective?</li>
+      <li>What did we do to the data?</li>
+      <li>Why is the output reliable enough for the intended audit use?</li>
+      </ol>
+    </article>
+  </main>
+</body>
+</html>

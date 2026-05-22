@@ -1,6 +1,6 @@
 ## Introduction & Problem Statement
 
-The application of data analysis in internal audit has been a topic of increasing interest and discussion in my recent months. While numerous knowledge briefs and guides are available from respected organizations like the IIA[^1] and ISACA[^2][^3][^4], these resources often present a more high-level and generic approach. As a professional with a background in data science, I've found that many existing resources in this area lack some depth and specificity to better bridge the gap between data analysis theory and its practical application in internal audit.
+The application of data analysis in internal audit has been a topic of increasing interest and discussion in recent months. While numerous knowledge briefs and guides are available from respected organizations like the IIA[^1] and ISACA[^2][^3][^4], these resources often present a more high-level and generic approach. As a professional with a background in data science, I've found that many existing resources in this area lack some depth and specificity to better bridge the gap between data analysis theory and its practical application in internal audit.
 
 This observation has motivated me to create this comprehensive guide. This guide explores the application of data analysis techniques in internal auditing, adapting key concepts from academic research methodologies[^5] to the practical world of internal audit focusing on two distinct concepts:
 

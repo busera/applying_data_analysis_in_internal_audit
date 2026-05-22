@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Quality Checklist | Applying Data Analysis in Internal Audit</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <main class="content-page">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/templates/data_quality_checklist.md">Source on GitHub</a></nav>
+    <article class="card document">
+      <h1>Data Quality Checklist</h1>
+      <h2>Receipt checks</h2>
+      <ul>
+      <li>File/table received from expected source.</li>
+      <li>Period matches request.</li>
+      <li>Row count matches source-owner expectation or reconciliation report.</li>
+      <li>Field list matches request.</li>
+      <li>File format can be opened and processed.</li>
+      </ul>
+      <h2>Completeness checks</h2>
+      <ul>
+      <li>Required fields are present.</li>
+      <li>Key identifiers are populated.</li>
+      <li>Date fields cover expected period.</li>
+      <li>No unexpected filters are visible.</li>
+      <li>Population reconciles to source report where possible.</li>
+      </ul>
+      <h2>Validity checks</h2>
+      <ul>
+      <li>Date formats are valid.</li>
+      <li>Numeric fields parse correctly.</li>
+      <li>Categorical values are understood.</li>
+      <li>Key fields are unique where expected.</li>
+      <li>Duplicates are identified and explained.</li>
+      </ul>
+      <h2>Reasonableness checks</h2>
+      <ul>
+      <li>Values fall within plausible ranges.</li>
+      <li>Outliers are flagged, not automatically removed.</li>
+      <li>Missing values are quantified.</li>
+      <li>Transformation row counts are tracked.</li>
+      <li>Exceptions are reviewed with business context.</li>
+      </ul>
+      <h2>Documentation</h2>
+      <ul>
+      <li>Validation procedures documented.</li>
+      <li>Limitations recorded.</li>
+      <li>Data owner questions logged.</li>
+      <li>Final usable dataset version identified.</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>

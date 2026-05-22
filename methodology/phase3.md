@@ -11,8 +11,8 @@ Perform data analysis in alignment with the defined objectives and questions.
 	- 8.3 Conduct correlation analysis
 	- 8.4 Identify potential patterns, anomalies, or areas of interest
 	- 8.5 Document initial observations and hypotheses generated from EDA
-		- Refine initial questions and hypotheses **[[2.1 Formulate initial questions and hypotheses]]**
-	- 8.6 Address newly identified gaps or additional data cleansing activities: **[[6.0 Data Validation and Cleansing]]**
+		- Refine initial questions and hypotheses [2.1 Formulate initial questions and hypotheses](./2.0_define_da_questions/00_define_da_questions.md)
+	- 8.6 Address newly identified gaps or additional data cleansing activities: [6.0 Data Validation and Cleansing](./phase2.md)
 <br><br>
 - **9.0 Develop and Execute Test Scripts and Queries**
 	- 9.1 Write scripts or queries to implement the planned analyses (both EDA and targeted)
@@ -35,7 +35,7 @@ Perform data analysis in alignment with the defined objectives and questions.
 - **12.0 Documentation and Iteration**
 	- 12.1 Document insights, methodologies, and decision points throughout the analysis process
 	- 12.2 Maintain a log of all analyses performed, including unsuccessful attempts and rationale
-	- 12.4 Prepare preliminary findings for review with key stakeholders and auditees
+	- 12.3 Prepare preliminary findings for review with key stakeholders and auditees
 
 ### Key Deliverables
 - Documented scripts, for example Python code or Jupyter Notebooks, and logs (for both EDA and targeted analyses)

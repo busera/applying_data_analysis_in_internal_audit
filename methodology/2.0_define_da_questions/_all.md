@@ -1,13 +1,13 @@
 ## Introduction & Problem Statement
 
-The application of data analysis in internal audit has been a topic of increasing interest and discussion in my recent months. While numerous knowledge briefs and guides are available from respected organizations like the IIA[^1] and ISACA[^2][^3][^4], these resources often present a more high-level and generic approach. As a professional with a background in data science, I've found that many existing resources in this area lack some depth and specificity to better bridge the gap between data analysis theory and its practical application in internal audit.
+The application of data analysis in internal audit has been a topic of increasing interest and discussion in recent months. While numerous knowledge briefs and guides are available from respected organizations like the IIA[^1] and ISACA[^2][^3][^4], these resources often present a more high-level and generic approach. As a professional with a background in data science, I've found that many existing resources in this area lack some depth and specificity to better bridge the gap between data analysis theory and its practical application in internal audit.
 
 This observation has motivated me to create this comprehensive guide. This guide explores the application of data analysis techniques in internal auditing, adapting key concepts from academic research methodologies[^5] to the practical world of internal audit focusing on two distinct concepts:
 
 - Confirmatory vs. Exploratory Questions
 - Causal vs. Non-Causal Questions
 
-To further bridge the gap between theory and practice, I am planning to build a [GitHub repository](https://github.com/busera/applying_data_analysis_in_internal_audit) that will collect examples (generated and anonymized real-life data), including Python code for analysis and visualization.
+To further bridge the gap between theory and practice, this repository will collect practical examples, synthetic datasets, Python code, and visualizations for audit analytics work.
 
 
 [^1]: IIA Knowledge Briefs: Data Analytics, Parts 1-3. https://www.theiia.org/en/content/articles/global-perspectives-and-insights/2023/GlobalPerspectivesInsightsDataAnalyticsParts1-3/
@@ -73,7 +73,7 @@ Purpose in Audit:
 
 Example Questions:
 - Is the error rate in expense reports less than the 5% threshold set by company policy?
-- Are 100% of transactions over $10,000 approved by an authorised manager?
+- Are 100% of transactions over $10,000 approved by an authorized manager?
 - Has the new inventory system reduced stockout incidents by at least 30% as projected?
 
 ### Exploratory Approach in Internal Audit

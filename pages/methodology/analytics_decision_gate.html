@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics Decision Gate | Applying Data Analysis in Internal Audit</title>
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+  <main class="content-page">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a> <span>/</span> <a href="https://github.com/busera/applying_data_analysis_in_internal_audit/blob/main/methodology/analytics_decision_gate.md">Source on GitHub</a></nav>
+    <article class="card document">
+      <h1>Analytics Decision Gate</h1>
+      <p>Use this gate before investing time in data extraction, cleansing, scripting, or visualization. Internal audit data analysis is strongest when the audit question, expected behavior, and usable data are aligned.</p>
+      <h2>Decision criteria</h2>
+      <table><thead><tr><th>Criterion</th><th>Strong signal</th><th>Weak signal</th><th>Decision impact</th></tr></thead><tbody>
+      <tr><td>Business process and risk clarity</td><td>The process, risk, control objective, and population are understood.</td><td>The audit team is still unclear what risk or control is being tested.</td><td>Clarify scope before requesting data.</td></tr>
+      <tr><td>Bright-line rule or measurable expectation</td><td>There is a policy threshold, approval rule, expected sequence, timing requirement, or known risk indicator.</td><td>The question is broad, subjective, or cannot be translated into observable data fields.</td><td>Narrow the question or treat the work as exploratory.</td></tr>
+      <tr><td>Data availability and usability</td><td>Source systems, fields, owners, extraction method, and expected row counts are known.</td><td>Data access is uncertain, fields are missing, or quality is unknown.</td><td>Run a small feasibility check before full analysis.</td></tr>
+      <tr><td>Audit value</td><td>The result can improve assurance, planning, risk assessment, or stakeholder insight.</td><td>The output would be interesting but not useful for audit conclusions or decisions.</td><td>Do not pursue unless it supports learning or planning.</td></tr>
+      <tr><td>Confidentiality and proportionality</td><td>The data requested is necessary and can be handled securely.</td><td>The request collects more sensitive data than needed.</td><td>Minimize, mask, or use synthetic data where possible.</td></tr>
+      </tbody></table>
+      <h2>Recommended decision outcomes</h2>
+      <table><thead><tr><th>Outcome</th><th>Use when</th><th>Next action</th></tr></thead><tbody>
+      <tr><td>Proceed</td><td>Criteria are mostly strong.</td><td>Request data and define validation checks.</td></tr>
+      <tr><td>Narrow scope</td><td>The idea is promising but too broad.</td><td>Reduce the population, question, or data fields.</td></tr>
+      <tr><td>Feasibility first</td><td>Data access or quality is uncertain.</td><td>Request a small extract or metadata sample.</td></tr>
+      <tr><td>Exploratory only</td><td>No reliable threshold exists, but patterns may inform planning.</td><td>Label outputs as hypothesis-generating, not audit findings.</td></tr>
+      <tr><td>Stop</td><td>Audit value is weak or data risk is disproportionate.</td><td>Use another audit procedure.</td></tr>
+      </tbody></table>
+      <h2>Questions to ask before requesting data</h2>
+      <ol>
+      <li>What audit objective does this analysis support?</li>
+      <li>What risk or control expectation is being tested or explored?</li>
+      <li>What population should be complete?</li>
+      <li>What would count as an exception, anomaly, trend, or relevant pattern?</li>
+      <li>Which fields are required, and why?</li>
+      <li>Which fields are sensitive or unnecessary?</li>
+      <li>How will completeness and accuracy of the extract be validated?</li>
+      <li>What output would change audit planning, testing, or reporting?</li>
+      <li>What limitations would need to be disclosed?</li>
+      <li>Who needs to review the interpretation before communication?</li>
+      </ol>
+      <h2>Link to the four-phase methodology</h2>
+      <p>This gate belongs in Phase 1 before full data request and acquisition. If the answer is “feasibility first,” run a small Phase 2 validation loop before building Phase 3 scripts.</p>
+    </article>
+  </main>
+</body>
+</html>

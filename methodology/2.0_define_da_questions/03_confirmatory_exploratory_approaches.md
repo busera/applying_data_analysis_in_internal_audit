@@ -25,7 +25,7 @@ Purpose in Audit:
 
 Example Questions:
 - Is the error rate in expense reports less than the 5% threshold set by company policy?
-- Are 100% of transactions over $10,000 approved by an authorised manager?
+- Are 100% of transactions over $10,000 approved by an authorized manager?
 - Has the new inventory system reduced stockout incidents by at least 30% as projected?
 
 ### Exploratory Approach in Internal Audit

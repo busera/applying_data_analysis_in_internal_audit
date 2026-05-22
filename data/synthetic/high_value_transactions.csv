@@ -1,0 +1,7 @@
+transaction_id,transaction_date,payment_or_posting_date,amount,currency,requester_id,approver_id,approval_timestamp,approval_status,approver_role,delegation_flag
+TXN-001,2026-01-05,2026-01-07,12500,CHF,U100,A200,2026-01-06T10:15:00,approved,manager,false
+TXN-002,2026-01-08,2026-01-08,22500,CHF,U101,, ,missing,,false
+TXN-003,2026-01-10,2026-01-11,18000,CHF,U102,A201,2026-01-12T09:00:00,approved,manager,false
+TXN-004,2026-01-12,2026-01-14,9500,CHF,U103,A202,2026-01-13T14:20:00,approved,manager,false
+TXN-005,2026-01-16,2026-01-18,52000,CHF,U104,A203,2026-01-17T08:30:00,approved,analyst,false
+TXN-006,2026-01-20,2026-01-21,34000,CHF,U105,A204,2026-01-20T16:45:00,approved,director,true

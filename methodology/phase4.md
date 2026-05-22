@@ -29,7 +29,7 @@ Synthesize and communicate the results of data analysis, providing actionable in
 		- Highlight limitations of the analysis and areas for further investigation
 		- Summarize the analytical process, including how initial explorations led to final conclusions
 	- 14.3 Review and refine
-		- Conduct internal review of presentation materialsSeek input from subject matter experts on findings and recommendations
+		- Conduct internal review of presentation materials. Seek input from subject matter experts on findings and recommendations
 		- Refine presentation based on feedback
 	- 14.4 Present and discuss results
 		- Deliver presentation to management and key stakeholders
